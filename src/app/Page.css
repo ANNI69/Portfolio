@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #ticker{
+    position: absolute;
+    overflow: hidden;
+    color: #122620;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    z-index: 1;
+    top: 75%;
+    left: 0;
+    font-family: "Stretch Pro"; 
+    font-weight: 100;
+    animation: ticker 10s linear infinite;
+    white-space: nowrap;
+  }
+  
+  /* ###################################################### */
+  /* Code Start Here */
+  
+  #main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #454f44;
+    padding: 10px;
+    background-image: url("./IMG_3349.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #name {
+    font-family: "Stretch Pro";
+    font-size: 60px;
+  }
+  
+  #add {
+    font-family: "GAELA";
+    font-size: larger;
+    font-size: 30px;
+    padding-bottom: 20;
+  }
+  #intro {
+    position: absolute;
+    font-size: larger;
+    top: 30%;
+    left: 5%;
+    /* background-color: rgba(14, 14, 14, 0.137); */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #intro:hover {
+    animation-direction: reverse;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  #quote {
+    position: absolute;
+    font-size: larger;
+    bottom: 440px;
+    right: 0px;
+    padding: 14px;
+    background-color: #564a39;
+    left: 83%;
+    border-bottom-left-radius: 60px;
+    border-top-left-radius: 50px;
+    z-index: 0;
+  }
+  
+  #nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px;
+    gap: 50px;
+    position: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute  ;
+  }
+  #nav h3 {
+    font-family: "GAELA";
+    font-size: larger;
+    border: #122620 2px solid;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  #nav h3:hover {
+    cursor: pointer;
+    transition: 0.9s;
+    background-color: #1f3d34;  
+    color: #D7BF8A;
+  }
+  
+  #nav h4 {
+    font-family: "Stretch Pro";
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  #nav h4:hover {
+    color: rgb(70, 71, 96);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    /* border: #122620 1px solid; */
+  }
+  
+  #sphere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #sphere h5 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    font-size: large;
+  }
+  
+  /* ################################################################################################ */
+  /* 2ndPage */
+  
+  #second {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A57D32;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #divcenter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ################################# */
+  .custom-scrollbar {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #D7BF8A #3f3f3f; /* Firefox */
+    scroll-behavior: smooth;
+    scroll-margin: 1px;
+  }
+  
+  .custom-scrollbar:hover {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #cb9011 #eeeeee; /* Firefox */
+  }
+  
+  /* Webkit (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #555555;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+  }
+  
+  /* ################################# */
+  
