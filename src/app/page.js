@@ -1,6 +1,6 @@
 "use client";
 import "./IMG_3349.jpg";
-import gsap from "gsap/gsap-core";
+import gsap from "gsap";
 import "./page.css";
 import { useEffect } from "react";
 
