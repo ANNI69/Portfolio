@@ -1,3 +1,15 @@
+@font-face {
+  font-family:"LemonMilk";
+  src: url("../public/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family: "Psans";
+  src: url("../public/PetrovSans-ExtraBold.ttf");
+}
+@font-face{
+  font-family: "Auto";
+  src: url("../public/Automove.otf");
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +24,7 @@
   #ticker{
     position: absolute;
     overflow: hidden;
-    color: #122620;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +32,8 @@
     z-index: 1;
     top: 75%;
     left: 0;
-    font-family: "Stretch Pro"; 
-    font-weight: 100;
+    font-family: "LemonMilk"; 
+    font-weight: 90;
     animation: ticker 10s linear infinite;
     white-space: nowrap;
   }
@@ -37,14 +49,14 @@
     align-items: center;
     background-color: #454f44;
     padding: 10px;
-    background-image: url("./IMG_3349.jpg");
+    background-image: url("../public/IMG_3349.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   
   #name {
-    font-family: "Stretch Pro";
+    font-family: "Psans";
     font-size: 60px;
   }
   
@@ -95,22 +107,13 @@
     position: absolute  ;
   }
   #nav h3 {
-    font-family: "GAELA";
+    font-family: "PSans";
     font-size: larger;
-    border: #122620 2px solid;
     padding: 20px;
-    border-radius: 20px;
-  }
-  
-  #nav h3:hover {
-    cursor: pointer;
-    transition: 0.9s;
-    background-color: #1f3d34;  
-    color: #D7BF8A;
   }
   
   #nav h4 {
-    font-family: "Stretch Pro";
+    font-family: "Auto";
     font-size: 2vw;
     color: rgb(0, 0, 0);
     font-weight: 100;
@@ -163,6 +166,30 @@
     justify-content: center;
     align-items: center;
     background-color: #A57D32;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #third{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D7BF8A;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #fourth{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7F5122;
     padding: 10px;
     background-size: cover;
     background-position: center;
