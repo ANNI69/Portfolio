@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
   }
   html,
   body {
@@ -108,9 +109,15 @@
     position: absolute  ;
   }
   #nav h3 {
-    font-family: "PSans";
+    font-family: "Auto";
+    font-size: 2vw;
     font-size: larger;
     padding: 20px;
+    border: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    transition: transform 0.5s ease-in-out;
+    user-select: none;
   }
   
   #nav h4 {

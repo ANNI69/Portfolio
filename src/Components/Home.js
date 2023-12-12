@@ -75,9 +75,7 @@ const Home = () => {
             code by Anii
           </h4>
           <div id="menu">
-            <h3>Contact</h3>
-            <h3>About</h3>
-            <h3>Work</h3>
+            <h3>Menu</h3>
           </div>
         </div>
         <div id="main">

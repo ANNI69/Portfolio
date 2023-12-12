@@ -21,4 +21,6 @@ html, body{
     background-size: cover;
     background-position: center;
     font-family: Auto;
+    transition: opacity 1s ease-in-out;
+
 }
