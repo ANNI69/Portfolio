@@ -3,57 +3,14 @@ import React from "react";
 import "../public/IMG_3349.jpg";
 import gsap from "gsap";
 import "./Home.css";
-import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css"; // Import Locomotive Scroll CSS
+import { useEffect, useRef } from "react";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const Home = () => {
-  useEffect(() => {
-    // Initialize Locomotive Scroll
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".custom-scrollbar"),
-      smooth: true,
-    });
-
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Update ScrollTrigger on Locomotive Scroll update
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    // Scroller proxy for ScrollTrigger
-    ScrollTrigger.scrollerProxy(".custom-scrollbar", {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.querySelector(".custom-scrollbar").style.transform
-        ? "transform"
-        : "fixed",
-    });
-
-    // Update ScrollTrigger on window resize
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-    // Refresh ScrollTrigger after setup
-    ScrollTrigger.refresh();
-
-    // Cleanup function
-    return () => {
-      locoScroll.destroy();
-    };
-  }, []);
   useEffect(() => {
     const initAnimation = () => {
       const intro = document.getElementById("intro");
@@ -71,7 +28,6 @@ const Home = () => {
         { opacity: 0, y: -100 },
         { opacity: 1, y: 0, duration: 1, delay: 1 }
       );
-      
 
       const sphere = document.getElementById("quote");
       // GSAP Animation
@@ -110,10 +66,9 @@ const Home = () => {
       window.removeEventListener("load", initAnimation);
     };
   }, []);
-  
   return (
     <>
-      <div id="smooth-scroll" className="custom-scrollbar">
+      <div className="custom-scrollbar">
         <div className="navbar" id="nav">
           <h4 id="firstH4">@anii</h4>
           <h4 id="secondH4" className="hidden">
@@ -127,17 +82,13 @@ const Home = () => {
         </div>
         <div id="main">
           <div id="intro">
-            <h1 id="name">
-              Aniruddh Nagare <br />
-            </h1>
+            <h1 id="name">Aniruddh Nagare</h1>
             <p id="add">Mumbai, India</p>
             <h1 id="name">↗</h1>
           </div>
         </div>
-        <div>
-          <div className="ticker" id="ticker">
-            <span>Anirudh nagare - Developer &amp; Designer</span>
-          </div>
+        <div className="ticker" id="ticker">
+          <span>Anirudh nagare - Developer &amp; Designer</span>
         </div>
         <div id="second">
           <div id="divcenter">

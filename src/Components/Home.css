@@ -1,16 +1,17 @@
 @font-face {
   font-family:"LemonMilk";
-  src: url("../public/LEMONMILK-Bold.otf");
-}
+  src: url("../public/LEMONMILK-Bold.otf");}
 @font-face {
   font-family: "Psans";
-  src: url("../public/PetrovSans-ExtraBold.ttf");
-}
+  src: url("../public/PetrovSans-ExtraBold.ttf");}
 @font-face{
   font-family: "Auto";
-  src: url("../public/Automove.otf");
-}
-* {
+  src: url("../public/Automove.otf");}
+@font-face {
+  font-family: "GAELA";
+  src: url("../public/GAELA.otf");}
+
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -236,3 +237,25 @@
   
   /* ################################# */
   
+  @media screen and (max-width: 768px) {
+    #main {
+      background-image: url("../public/IMG_3351.jpg");
+    }
+
+    #intro {
+      top: 60%;
+      left: 5%;
+    }
+    #name {
+      font-size: 40px; /* Adjust font size for smaller screens */
+
+    }
+  
+    #add {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    #nav h4 {
+      font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+  }  
