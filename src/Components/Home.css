@@ -134,7 +134,6 @@
   }
   
   #nav h4:hover {
-    color: rgb(70, 71, 96);
     cursor: pointer;
     transition: 0.5s;
   }

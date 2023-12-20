@@ -3,12 +3,10 @@ import React from "react";
 import "../public/IMG_3349.jpg";
 import gsap from "gsap";
 import "./Home.css";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css"; // Import Locomotive Scroll CSS
-import { useEffect, useRef } from "react";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+import { useEffect } from "react";
+import styles from "./Home.module.scss";
+import { AnimatePresence } from "framer-motion";
+import Nav from "./Nav/Nav";
 
 const Home = () => {
   useEffect(() => {
@@ -66,6 +64,8 @@ const Home = () => {
       window.removeEventListener("load", initAnimation);
     };
   }, []);
+
+  const [isActive, setIsActive] = React.useState(false);
   return (
     <>
       <div className="custom-scrollbar">
@@ -75,7 +75,20 @@ const Home = () => {
             code by Anii
           </h4>
           <div id="menu">
-            <h3>Menu</h3>
+            <div
+              onClick={() => {
+                setIsActive(!isActive);
+              }}
+              className={styles.button}
+            >
+              <div
+                className={`${styles.burger} ${
+                  isActive ? styles.burgerActive : ""
+                }`}
+              ></div>
+            </div>
+
+            <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
           </div>
         </div>
         <div id="main">

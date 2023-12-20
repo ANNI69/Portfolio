@@ -4,8 +4,6 @@ import Intro from '@/Components/Intro';
 import React from 'react'
 import gsap from "gsap";
 import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useState } from "react";
 
 const Page = () => {
