@@ -1,6 +1,6 @@
 .menu {
   height: 100vh;
-  background-color: #2c261d;
+  background-color: #000000;
   position: fixed;
   right: 0;
   top: 0;
@@ -54,7 +54,7 @@
     font-size: 12px;
     gap: 40px;
     color: #ffffff;
-    padding-bottom: 30px; 
+    padding-bottom: 120px; 
     @media screen and (min-width: 769px) {
         padding-bottom: 30px;        
     }

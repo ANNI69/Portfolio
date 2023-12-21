@@ -56,7 +56,7 @@ export default function index() {
             <div className={styles.footer}>
                 <a href='https://github.com/ANNI69' >GitHub</a>
                 <a href='https://www.instagram.com/_exotic.anii/'>Instagram</a>
-                <a href=''>X</a>
+                <a href='https://twitter.com/AniruddhNagare'>X</a>
                 <a href='https://www.linkedin.com/in/aniruddh-nagare-698787208/'>LinkedIn</a>
             </div>
         </div>

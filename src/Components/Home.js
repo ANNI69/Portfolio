@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import styles from "./Home.module.scss";
 import { AnimatePresence } from "framer-motion";
 import Nav from "./Nav/Nav";
+import ScrollText from "./Scrolltext/Scrolltext";
 
 const Home = () => {
   useEffect(() => {
@@ -64,7 +65,7 @@ const Home = () => {
       window.removeEventListener("load", initAnimation);
     };
   }, []);
-
+  const path = "../public/Arrow.png";
   const [isActive, setIsActive] = React.useState(false);
   return (
     <>
@@ -87,7 +88,6 @@ const Home = () => {
                 }`}
               ></div>
             </div>
-
             <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
           </div>
         </div>
@@ -99,21 +99,95 @@ const Home = () => {
           </div>
         </div>
         <div className="ticker" id="ticker">
-          <span>Anirudh nagare - Developer &amp; Designer</span>
+          <span>Anirudh nagare - Developer &amp; Freelancer</span>
         </div>
         <div id="second">
-          <div id="divcenter">
-            <h1>This is my portfolio</h1>
+          <div id="1sthalf">
+            {/* <ScrollText/> */}
+            <div id="leftText">
+              <h1>
+                I am a full stack developer and designer. I have been working in
+                this field for more than 2 years. I have worked on various
+                projects and have a good knowledge of various technologies.
+              </h1>
+            </div>
+            <div id="About">
+              <h2>About</h2>
+            </div>
+            <div id="FCircle">
+              <a href="/about">
+                <img
+                  src="https://i.ibb.co/qxG8F77/diagonal-arrow-svgrepo-com-4.png"
+                  alt="Aniruddh Nagare"
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div id="third">
-          <div id="divcenter">
-            <h1>This is my portfolio 2 </h1>
+          <div id="Firstprj">
+            <a target="blank" href="https://github.com/ANNI69/e-commerce.git">
+              <h1>E-Commerce App </h1>
+              <p>Mern Stack - Payload CMS</p>
+            </a>
+          </div>
+          <div id="Firstprj">
+            <a target="blank" href="https://github.com/ANNI69/e-commerce.git">
+              <h1>News App - Flutter</h1>
+              <p>REST APi - Google Firebase</p>
+            </a>
+          </div>
+          <div id="Firstprj">
+            <a target="blank" href="https://github.com/ANNI69/WeatherApp.git">
+              <h1>Weather App </h1>
+              <p>REST APi - ReactJs</p>
+            </a>
+          </div>
+          <div id="Firstprj">
+            <a target="blank" href="https://github.com/ANNI69/Sudo-Player.git">
+              <h1>Music Player - Flutter &amp; NextJs</h1>
+              <p>REST APi - Flutter, NextJs & MongoDB </p>
+            </a>
+          </div>
+          <div id="Firstprj">
+            <a target="blank" href="https://github.com/ANNI69">
+              <h1>More Work</h1>
+              <p>........</p>
+            </a>
           </div>
         </div>
         <div id="fourth">
-          <div id="divcenter">
-            <h1>This is my portfolio 3 </h1>
+          <div id="footer">
+            <h1>Get In Touch</h1>
+            <p>I am available for freelance work. Connect with me via email</p>
+          </div>
+          <a href="/contact">
+            <div id="Circle">
+              <img
+                src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
+                alt="Aniruddh Nagare"
+              />
+            </div>
+          </a>
+          <div id="social">
+            <a
+              target="blank"
+              href="https://www.linkedin.com/in/aniruddh-nagare-698787208"
+            >
+              <h6>LinkedIn ↗</h6>
+            </a>
+            <a target="blank" href="https://github.com/ANNI69">
+              <h6>Github ↗</h6>
+            </a>
+            <a target="blank" href="https://twitter.com/AniruddhNagare">
+              <h6>X(Twitter) ↗</h6>
+            </a>
+            <a target="blank" href="https://www.instagram.com/_exotic.anii">
+              <h6>Instagram ↗</h6>
+            </a>
+            <a target="blank" href="https://resolutionbelike.netlify.app/">
+              <h6>Photography ↗</h6>
+            </a>
           </div>
         </div>
       </div>
