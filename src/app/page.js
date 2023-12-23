@@ -2,7 +2,6 @@
 import Home from '@/Components/Home';
 import Intro from '@/Components/Intro';
 import React from 'react'
-import gsap from "gsap";
 import { useEffect } from "react";
 import { useState } from "react";
 

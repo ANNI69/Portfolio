@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import styles from "./Home.module.scss";
 import { AnimatePresence } from "framer-motion";
 import Nav from "./Nav/Nav";
-import ScrollText from "./Scrolltext/Scrolltext";
 import Image from "next/image";
 
 const Home = () => {
