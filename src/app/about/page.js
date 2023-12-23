@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
-// import "./page.css";
+import "./page.css";
 import Nav from "../../Components/Nav/Nav";
 import styles from "../../Components/Home.module.scss";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
 
-const about = () => {
+const About = () => {
   const [isActive, setIsActive] = React.useState(false);
   return (
     <>
@@ -37,4 +36,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

@@ -4,9 +4,8 @@ import "./page.css";
 import Nav from "../../Components/Nav/Nav";
 import styles from "../../Components/Home.module.scss";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
 
-const contact = () => {
+const Contact = () => {
   const [isActive, setIsActive] = React.useState(false);
   return (
     <>
@@ -118,4 +117,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

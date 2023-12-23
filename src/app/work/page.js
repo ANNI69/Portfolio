@@ -4,10 +4,9 @@ import React from "react";
 import Nav from "../../Components/Nav/Nav";
 import styles from "../../Components/Home.module.scss";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import "./page.css";
 
-const work = () => {
+const Work = () => {
   const [isActive, setIsActive] = React.useState(false);
   return (
     <>
@@ -79,4 +78,4 @@ const work = () => {
   );
 };
 
-export default work;
+export default Work;
