@@ -8,6 +8,7 @@ import styles from "./Home.module.scss";
 import { AnimatePresence } from "framer-motion";
 import Nav from "./Nav/Nav";
 import ScrollText from "./Scrolltext/Scrolltext";
+import Image from "next/image";
 
 const Home = () => {
   useEffect(() => {
@@ -96,7 +97,9 @@ const Home = () => {
             <h1 id="name">Aniruddh Nagare</h1>
             <p id="add">Mumbai, India</p>
             <div id="aCircle">
-              <imgage
+              <Image
+                width={100}
+                height={100}
                 src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                 alt="Aniruddh Nagare"
               />
@@ -121,7 +124,9 @@ const Home = () => {
             </div>
             <div id="FCircle">
               <a href="/about">
-                <imgage
+                <Image
+                  width={100}
+                  height={100}
                   src="https://i.ibb.co/qxG8F77/diagonal-arrow-svgrepo-com-4.png"
                   alt="Aniruddh Nagare"
                 />
@@ -171,7 +176,9 @@ const Home = () => {
           </div>
           <a href="/contact">
             <div id="Circle">
-              <imgage
+              <Image
+                width={100}
+                height={100}
                 src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                 alt="Aniruddh Nagare"
               />
