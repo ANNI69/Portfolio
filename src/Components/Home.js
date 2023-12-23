@@ -96,7 +96,7 @@ const Home = () => {
             <h1 id="name">Aniruddh Nagare</h1>
             <p id="add">Mumbai, India</p>
             <div id="aCircle">
-              <img
+              <imgage
                 src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                 alt="Aniruddh Nagare"
               />
@@ -121,7 +121,7 @@ const Home = () => {
             </div>
             <div id="FCircle">
               <a href="/about">
-                <img
+                <imgage
                   src="https://i.ibb.co/qxG8F77/diagonal-arrow-svgrepo-com-4.png"
                   alt="Aniruddh Nagare"
                 />
@@ -171,7 +171,7 @@ const Home = () => {
           </div>
           <a href="/contact">
             <div id="Circle">
-              <img
+              <imgage
                 src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                 alt="Aniruddh Nagare"
               />

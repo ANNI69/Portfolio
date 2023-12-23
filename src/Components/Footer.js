@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <a href="/contact">
           <div id="Circle">
-            <img
+            <imgage
               src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
               alt="Aniruddh Nagare"
             />
