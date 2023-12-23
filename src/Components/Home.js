@@ -95,7 +95,12 @@ const Home = () => {
           <div id="intro">
             <h1 id="name">Aniruddh Nagare</h1>
             <p id="add">Mumbai, India</p>
-            <h1 id="name">↗</h1>
+            <div id="aCircle">
+              <img
+                src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
+                alt="Aniruddh Nagare"
+              />
+            </div>
           </div>
         </div>
         <div className="ticker" id="ticker">
@@ -159,7 +164,10 @@ const Home = () => {
         <div id="fourth">
           <div id="footer">
             <h1>Get In Touch</h1>
-            <p>I am available for freelance work. Connect with me via email</p>
+            <p>
+              I am available for freelance work. Connect with me via
+              <a href="mailto:aniruddhnagare@4127@gmail.com"> email</a>
+            </p>
           </div>
           <a href="/contact">
             <div id="Circle">

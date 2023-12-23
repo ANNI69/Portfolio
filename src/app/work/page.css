@@ -1,11 +1,82 @@
+@font-face {
+  font-family: "LemonMilk";
+  src: url("../../public/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family: "Cool";
+  src: url("../../public/coolvetica.otf");
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-  }
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+}
+#textbox {
+  padding: 10%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#text h1 {
+  position: absolute;
+  top: 10%;
+  right: 40%;
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-family: "LemonMilk";
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+
+#third {
+  font-family: "Cool";
+  height: 230vh;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10%;
+  background-size: cover;
+  background-position: center;
+}
+
+#Firstprj {
+  font-family: "Cool";
+  background-color: #ffffff;
+  padding: 80px;
+  border-bottom: #000000 1px solid;
+  border-top: #000000 1px solid;
+  letter-spacing: 1px;
+}
+#Firstprj span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #616161;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+#Firstprj a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#Firstprj:hover {
+  transform: scale(1.1); /* Increase the scale for a smoother effect */
+  transition: transform 0.3s ease-in-out; /* Adjust the transition property */
+  cursor: pointer;
+}

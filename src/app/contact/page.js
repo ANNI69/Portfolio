@@ -35,8 +35,7 @@ const contact = () => {
         <div id="contactbody">
           <div id="leftdiv">
             <p>Lets Start A Project Together!</p>
-
-            <form>
+            <form action="">
               <p>
                 <span>01</span> Enter Name
               </p>
@@ -55,10 +54,12 @@ const contact = () => {
               <input type="text" placeholder="Suggestion here.."></input>
 
               <div id="Circle">
-                <img
-                  src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
-                  alt="Aniruddh Nagare"
-                />
+                <button type="submit">
+                  <img
+                    src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
+                    alt="Aniruddh Nagare"
+                  />
+                </button>
               </div>
             </form>
           </div>
@@ -80,7 +81,7 @@ const contact = () => {
             <div id="social">
               <h6>Socials</h6>
               <p>
-                <span>Instagram: </span>
+                <span>Instagram </span>
                 <a href="https://www.instagram.com/aniruddhnagare/">
                   <img
                     id="social"

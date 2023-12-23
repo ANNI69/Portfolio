@@ -18,6 +18,10 @@
   font-family: "Cool";
   src: url("../public/coolvetica.otf");
 }
+@font-face {
+  font-family: "Nexa";
+  src: url("../public/Nexa-Heavy.ttf");
+}
 
 * {
   margin: 0;
@@ -66,7 +70,7 @@ body {
 }
 
 #name {
-  font-family: "Cool";
+  font-family: "Nexa";
   font-size: 60px;
   letter-spacing: 1px;
 }
@@ -194,9 +198,9 @@ body {
   right: 40%;
   position: absolute;
   padding-right: 40px;
-  padding-top: 70px;
+  padding-top: 60px;
   letter-spacing: 1px;
-  height: 50%;
+  height: 60%;
   margin-right: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -260,6 +264,23 @@ body {
   padding: 30px;
   border-bottom: 1px solid hsl(0, 0%, 100%);
 }
+#footer h1 {
+  font-family: "Nexa";
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#footer a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+#footer a:hover {
+  color: #434343;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
 
 #footer p {
   font-family: "LemonMilk";
@@ -300,6 +321,32 @@ body {
   width: 100%;
   border-radius: 50%;
 }
+
+#aCircle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+}
+
+#aCircle:hover {
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#aCircle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
 
 #FCircle {
   position: absolute;
@@ -433,6 +480,7 @@ body {
   }
 
   #second {
+    height: 50vh;
   }
   #third {
     height: 160vh;
@@ -440,12 +488,14 @@ body {
 
   #leftText {
     left: 10%;
-    right: 20%;
+    right: 10%;
     position: absolute;
+    width: 100%;
+    padding-right: 75px;
   }
 
   #intro {
-    top: 60%;
+    top: 50%;
     left: 5%;
   }
   #name {
