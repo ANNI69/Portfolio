@@ -48,7 +48,7 @@ const About = () => {
               Nextjs, flutter, Django, MongoDB, Mysql.
             </h3>
           </div>
-          
+
           <div id="whoami">
             <h1>
               <span>02 </span>I can help You With
@@ -65,34 +65,34 @@ const About = () => {
 
         <div className="logos">
           <div className="logos-slide">
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' />
           </div>
           <div className="logos-slide">
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-            <image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg' />
+            <image src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' />
           </div>
         </div>
         <div id="fourth">
