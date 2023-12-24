@@ -57,7 +57,7 @@ const Contact = () => {
 
                 <div id="Circle">
                   <button type="submit">
-                    <img
+                    <image
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
                     />
@@ -85,7 +85,7 @@ const Contact = () => {
                 <p>
                   <span>Instagram </span>
                   <a href="https://www.instagram.com/aniruddhnagare/">
-                    <img
+                    <image
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -95,7 +95,7 @@ const Contact = () => {
                 <p>
                   <span>LinkedIn </span>
                   <a href="https://www.linkedin.com/in/aniruddhnagare/">
-                    <img
+                    <image
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -105,7 +105,7 @@ const Contact = () => {
                 <p>
                   <span> GitHub </span>
                   <a href="https://github.com/ANNI69">
-                    <img
+                    <image
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
