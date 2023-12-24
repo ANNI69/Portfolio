@@ -28,10 +28,23 @@ body {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  #text {
+   display: none;
+  }
+  #Firstprj h1{
+    font-size: 20px;
+  }
+  #Firstprj span{
+    font-size: 15px;
+  }
+  #Firstprj p{
+    font-size: 15px;
+  }  
+}
 
 #text h1 {
   position: absolute;
-  
   text-transform: capitalize;
   font-size: 3rem;
   font-family: "LemonMilk";
@@ -60,6 +73,15 @@ body {
   border-bottom: #000000 1px solid;
   border-top: #000000 1px solid;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  #Firstprj {
+    padding: 50px;
+  }
+  #third {
+    height: 100vh;
+  }
+  
 }
 #Firstprj span {
   font-size: 18px;
