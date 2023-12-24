@@ -8,7 +8,7 @@ import Link from './Link/Link';
 const navItems = [
   {
     title: "Home",
-    href: "/",
+    href: "/home",
   },
   {
     title: "Work",
