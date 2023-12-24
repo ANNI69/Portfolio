@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';  // Import useRouter instead of usePathname
 import { menuSlide } from '../../app/home/anim';
 import Link from './Link/Link';
 
@@ -22,12 +22,12 @@ const navItems = [
     title: "Contact",
     href: "/contact",
   },
-]
+];
 
-export default function index() {
+export default function Index() {  // Rename the component to start with an uppercase letter
 
-  const pathname = usePathname();
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  const router = useRouter();  // Use useRouter hook to get the current pathname
+  const [selectedIndicator, setSelectedIndicator] = useState(router.pathname);
 
   return (
     <motion.div 
@@ -36,30 +36,30 @@ export default function index() {
       animate="enter" 
       exit="exit" 
       className={styles.menu}
-      >
-       <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
-                    {
-                      navItems.map( (data, index) => {
-                        return <Link 
-                        key={index} 
-                        data={{...data, index}} 
-                        isActive={selectedIndicator == data.href} 
-                        setSelectedIndicator={setSelectedIndicator}>
-                        </Link>
-                      })
-                    }
-            </div>
-            <div className={styles.footer}>
-                <a href='https://github.com/ANNI69' >GitHub</a>
-                <a href='https://www.instagram.com/_exotic.anii/'>Instagram</a>
-                <a href='https://twitter.com/AniruddhNagare'>X</a>
-                <a href='https://www.linkedin.com/in/aniruddh-nagare-698787208/'>LinkedIn</a>
-            </div>
+    >
+      <div className={styles.body}>
+        <div onMouseLeave={() => { setSelectedIndicator(router.pathname) }} className={styles.nav}>
+          <div className={styles.header}>
+            <p>Navigation</p>
+          </div>
+          {navItems.map((data, index) => {
+            return (
+              <Link
+                key={index}
+                data={{ ...data, index }}
+                isActive={selectedIndicator === data.href}
+                setSelectedIndicator={setSelectedIndicator}
+              />
+            );
+          })}
         </div>
+        <div className={styles.footer}>
+          <a href='https://github.com/ANNI69'>GitHub</a>
+          <a href='https://www.instagram.com/_exotic.anii/'>Instagram</a>
+          <a href='https://twitter.com/AniruddhNagare'>X</a>
+          <a href='https://www.linkedin.com/in/aniruddh-nagare-698787208/'>LinkedIn</a>
+        </div>
+      </div>
     </motion.div>
-  )
+  );
 }
