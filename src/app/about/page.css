@@ -9,3 +9,381 @@
     height: 100%;
     width: 100%;
   }
+  @font-face {
+    font-family: "LemonMilk";
+    src: url("../../public/LEMONMILK-Bold.otf");
+  }
+  @font-face {
+    font-family: "Psans";
+    src: url("../../public/PetrovSans-ExtraBold.ttf");
+  }
+  @font-face {
+    font-family: "Auto";
+    src: url("../../public/Automove.otf");
+  }
+  @font-face {
+    font-family: "GAELA";
+    src: url("../../public/GAELA.otf");
+  }
+  @font-face {
+    font-family: "Cool";
+    src: url("../../public/coolvetica.otf");
+  }
+  @font-face {
+    font-family: "Nexa";
+    src: url("../../public/Nexa-Heavy.ttf");
+  }
+  #full{
+    width: 100%;
+    height: 150VH;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #whoami{
+    font-family: "Cool";
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border-bottom: #000000 1px solid;
+    padding: 10px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+    width: 60%;
+  }
+
+  #whoami h1{
+    font-family: "LemonMilk";
+    font-size: 40px;
+    color: #000000;
+    letter-spacing: 1px;
+    width: 60%;
+  }
+  #whoami span{
+    font-family: "LemonMilk";
+    font-size: 18px;
+    color: #555555;
+  }
+  @media screen and (max-width: 768px) {
+    #full{
+      height: 100VH;
+    }
+    #whoami{
+      width: 90%;
+      font-size: 15px;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    #whoami h1{
+      width: 90%;
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+    height: 100px;
+    width: 100px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .custom-scrollbar {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #d7bf8a #3f3f3f; /* Firefox */
+    scroll-behavior: smooth;
+    scroll-margin: 1px;
+  }
+  .custom-scrollbar h1{
+    padding: 10px;
+    font-family: "Cool";
+    margin: 20px;
+  }
+  
+  .custom-scrollbar:hover {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #cb9011 #eeeeee; /* Firefox */
+  }
+  
+  /* Webkit (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #555555;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+  }
+  
+
+  
+
+/* ######################################Footer###################################################  */
+#fourth {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: absolute;
+  padding-bottom: 40px;
+  text-transform: capitalize;
+}
+#footer {
+  padding: 30px;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+#footer h1 {
+  font-family: "Nexa";
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#footer a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+#footer a:hover {
+  color: #434343;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+
+#footer p {
+  font-family: "LemonMilk";
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#foorter h5 {
+  font-family: "LemonMilk";
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+#Circle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+  margin-top: 30px;
+}
+#Circle:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#Circle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#aCircle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+}
+
+#aCircle:hover {
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#aCircle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+#FCircle {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: #000000;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+  margin-top: 30px;
+  left: 75%;
+  top: 140%;
+}
+#About {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  left: 75%;
+  top: 130%;
+  font-size: 40px;
+}
+#About h2{
+  font-family: "Cool";
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+#FCircle:hover {
+  background-color: #000000;
+  color: #000000;
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#FCircle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  #FCircle {
+    left: 65%;
+    top: 160%;
+  }
+  #About {
+    left: 75%;
+    top: 130%;
+  }
+}
+
+#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-top: 30px;
+}
+
+#socials a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  #socials,
+  #About,
+  #FCircle {
+    display: none;
+  }
+}

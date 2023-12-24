@@ -22,7 +22,7 @@ body {
 
 #main{
   background-color: darkgrey;
-  height: 100%;
+  height: 150vh;
   width: 100%;
   font-family: "LemonMilk";
 }
@@ -38,6 +38,7 @@ body {
   width: 60%;
   padding: 20px;
   margin: 40px;
+  padding-top: 30px;
 }
 #leftdiv p{
   font-size: 28px;  
@@ -154,6 +155,7 @@ input::placeholder{
   #leftdiv {
     width: 100%;
     margin: 0;
+    padding-top: 90px;
   }
   #rightdiv {
     width: 100%;
@@ -163,4 +165,224 @@ input::placeholder{
     margin-left: 40%;
   }
   
+}
+
+
+
+
+/* ######################################Footer###################################################  */
+#fourth {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: absolute;
+  padding-bottom: 40px;
+  text-transform: capitalize;
+}
+#footer {
+  padding: 30px;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+#footer h1 {
+  font-family: "Nexa";
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#footer a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+#footer a:hover {
+  color: #434343;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+
+#footer p {
+  font-family: "LemonMilk";
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+#foorter h5 {
+  font-family: "LemonMilk";
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+#Circle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+  margin-top: 30px;
+}
+#Circle:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#Circle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#aCircle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+}
+
+#aCircle:hover {
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#aCircle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+#FCircle {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: #000000;
+  border-radius: 50%;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  user-select: none;
+  margin-top: 30px;
+  left: 75%;
+  top: 140%;
+}
+#About {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  left: 75%;
+  top: 130%;
+  font-size: 40px;
+}
+#About h2{
+  font-family: "Cool";
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+#FCircle:hover {
+  background-color: #000000;
+  color: #000000;
+  transition: 0.5s;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+#FCircle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  #FCircle {
+    left: 65%;
+    top: 160%;
+  }
+  #About {
+    left: 75%;
+    top: 130%;
+  }
+}
+
+#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-top: 30px;
+}
+
+#socials a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  #socials,
+  #About,
+  #FCircle {
+    display: none;
+  }
+}
+
+/* ###################################Scrollbar################################### */
+
+.custom-scrollbar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #d7bf8a #3f3f3f; /* Firefox */
+  scroll-behavior: smooth;
+  scroll-margin: 1px;
+}
+#theh1 {
+  padding: 40px;
+  font-family: "Cool";
+}
+
+.custom-scrollbar:hover {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #cb9011 #eeeeee; /* Firefox */
+}
+
+/* Webkit (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #555555;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #eeeeee;
 }

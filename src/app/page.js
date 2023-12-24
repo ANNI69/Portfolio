@@ -1,6 +1,6 @@
 "use client";
-import Home from '@/Components/Home';
-import Intro from '@/Components/Intro';
+import Home from '../app/home/page.js';
+import Intro from '@/app/home/Intro.js';
 import React from 'react'
 import { useEffect } from "react";
 import { useState } from "react";
@@ -20,8 +20,9 @@ const Page = () => {
 
   return (
     <>
-      {showIntro && <Intro />}
-      {!showIntro && <Home />}
+      {/* {showIntro && <Intro />}
+      {!showIntro && <Home />} */}
+      <Home />
     </>
   );
 };
