@@ -4,7 +4,6 @@ import "./page.css";
 import Nav from "../../Components/Nav/Nav";
 import styles from "../../Components/Home.module.scss";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 const Contact = () => {
   const [isActive, setIsActive] = React.useState(false);
@@ -57,7 +56,7 @@ const Contact = () => {
 
                 <div id="Circle">
                   <button type="submit">
-                    <image
+                    <img
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
                     />
@@ -85,7 +84,7 @@ const Contact = () => {
                 <p>
                   <span>Instagram </span>
                   <a href="https://www.instagram.com/aniruddhnagare/">
-                    <image
+                    <img
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -95,7 +94,7 @@ const Contact = () => {
                 <p>
                   <span>LinkedIn </span>
                   <a href="https://www.linkedin.com/in/aniruddhnagare/">
-                    <image
+                    <img
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -105,7 +104,7 @@ const Contact = () => {
                 <p>
                   <span> GitHub </span>
                   <a href="https://github.com/ANNI69">
-                    <image
+                    <img
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -128,7 +127,7 @@ const Contact = () => {
             </div>
             <a href="/contact">
               <div id="Circle">
-                <Image
+                <img
                   width={100}
                   height={100}
                   src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
