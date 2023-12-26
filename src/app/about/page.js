@@ -58,7 +58,7 @@ const About = () => {
               frontend and backend technologies to create seamless, end-to-end
               digital experiences. Whether you are looking for a custom software
               solution to address specific needs, a standout mobile app, or
-              seamless API integrations, I've got you covered.
+              seamless API integrations, I have got you covered.
             </h3>
           </div>
         </div>
