@@ -20,9 +20,8 @@ const Page = () => {
 
   return (
     <>
-      {/* {showIntro && <Intro />}
-      {!showIntro && <Home />} */}
-      <Home />
+      {showIntro && <Intro />}
+      {!showIntro && <Home />}
     </>
   );
 };

@@ -61,7 +61,7 @@ const Work = () => {
             <div id="Firstprj">
               <a
                 target="blank"
-                href="https://github.com/ANNI69/Sudo-Player.git"
+                href="https://github.com/ANNI69/SyncBeat-Music-Player.git"
               >
                 <h1><span>04 </span>Music Player - Flutter &amp; NextJs</h1>
                 <p>REST APi - Flutter, NextJs & MongoDB </p>
