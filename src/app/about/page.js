@@ -4,6 +4,7 @@ import "./page.css";
 import Nav from "../../Components/Nav/Nav";
 import styles from "../../Components/Home.module.scss";
 import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   const [isActive, setIsActive] = React.useState(false);
@@ -40,11 +41,11 @@ const About = () => {
               <span>01 </span>Who Am I?
             </h1>
             <h3>
-              I'm more than just a developer; I'm a problem solver, a lifelong
+              I am more than just a developer; I am a problem solver, a lifelong
               learner, and a technology enthusiast. My journey in the world of
-              coding began At Highschool. Over the years, I've had the privilege
-              of working on diverse projects that have honed my skills in
-              Nextjs, flutter, Django, MongoDB, Mysql.
+              coding began At Highschool. Over the years, I have had the
+              privilege of working on diverse projects that have honed my skills
+              in Nextjs, flutter, Django, MongoDB, Mysql.
             </h3>
           </div>
 
@@ -55,7 +56,7 @@ const About = () => {
             <h3>
               I specialize in web development, offering expertise in both
               frontend and backend technologies to create seamless, end-to-end
-              digital experiences. Whether you're looking for a custom software
+              digital experiences. Whether you are looking for a custom software
               solution to address specific needs, a standout mobile app, or
               seamless API integrations, I've got you covered.
             </h3>
@@ -64,34 +65,138 @@ const About = () => {
 
         <div className="logos">
           <div className="logos-slide">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              width={100}
+              height={100}
+            />
           </div>
           <div className="logos-slide">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              width={100}
+              height={100}
+            />
           </div>
         </div>
         <div id="fourth">
@@ -107,7 +212,7 @@ const About = () => {
           </div>
           <a href="/contact">
             <div id="Circle">
-              <img
+              <Image
                 width={100}
                 height={100}
                 src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
