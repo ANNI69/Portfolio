@@ -152,7 +152,10 @@ const Home = () => {
             </a>
           </div>
           <div id="Firstprj">
-            <a target="blank" href="https://github.com/ANNI69/SyncBeat-Music-Player.git">
+            <a
+              target="blank"
+              href="https://github.com/ANNI69/SyncBeat-Music-Player.git"
+            >
               <h1>Music Player - Flutter &amp; NextJs</h1>
               <p>REST APi - Flutter, NextJs & MongoDB </p>
             </a>

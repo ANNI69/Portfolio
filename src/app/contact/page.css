@@ -77,23 +77,23 @@ input::placeholder{
 
 
 
-#Circle {
+#zCircle {
+  background-color: #000000;
   position: relative;
   justify-content: center;
   align-items: center;
   height: 100px;
   width: 100px;
-  background-color: #f7f7f7;
   border-radius: 50%;
-  color: #000000;
+  color: #ffffff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 30px;
   user-select: none;
   margin-top: 30px;
   margin-left: 20%;
 }
-#Circle button {
-  background-color: #f7f7f7;
+#zCircle button {
+  background-color: #000000;
   border: none;
   outline: none;
   font-size: 20px;
@@ -102,15 +102,15 @@ input::placeholder{
   cursor: pointer;
 }
 
-#Circle:hover {
-  background-color: #ffffff;
+#zCircle:hover {
+  background-color: #000000;
   color: #ffffff;
   transition: 0.5s;
   scale: 1.1;
   cursor: pointer;
 }
 
-#Circle img {
+#zCircle img {
   height: 100%;
   width: 100%;
   border-radius: 50%;

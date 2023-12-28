@@ -55,11 +55,13 @@ const Contact = () => {
                 </p>
                 <input type="text" placeholder="Eg. Subject"></input>
 
-                <div id="Circle">
+                <div id="zCircle">
                   <button type="submit">
                     <Image
-                      src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
+                      src="https://i.ibb.co/qxG8F77/diagonal-arrow-svgrepo-com-4.png"
                       alt="Aniruddh Nagare"
+                      width={100}
+                      height={100}
                     />
                   </button>
                 </div>
@@ -87,6 +89,8 @@ const Contact = () => {
                   <a href="https://www.instagram.com/aniruddhnagare/">
                     <Image
                       id="social"
+                      width={100}
+                      height={100}
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
                     />
@@ -96,6 +100,8 @@ const Contact = () => {
                   <span>LinkedIn </span>
                   <a href="https://www.linkedin.com/in/aniruddhnagare/">
                     <Image
+                      width={100}
+                      height={100}
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"
@@ -106,6 +112,8 @@ const Contact = () => {
                   <span> GitHub </span>
                   <a href="https://github.com/ANNI69">
                     <Image
+                      width={100}
+                      height={100}
                       id="social"
                       src="https://i.ibb.co/XZJxHHk/diagonal-arrow-svgrepo-com-2.png"
                       alt="Aniruddh Nagare"

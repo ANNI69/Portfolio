@@ -12,8 +12,8 @@ const Work = () => {
   const [isActive, setIsActive] = React.useState(false);
   return (
     <>
-      <div id="main">
-        <div>
+      <div> 
+        <div> 
           <div>
             <div id="menu">
               <div
@@ -35,6 +35,7 @@ const Work = () => {
           </div>
         </div>
 
+          <h1 id="theh1">/Work</h1>
         <div id="textbox">
           <div id="text">
             <h1> This is Some Of My Work</h1>
