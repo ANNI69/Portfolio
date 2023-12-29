@@ -70,7 +70,7 @@ const Home = () => {
     <>
       <div className="custom-scrollbar">
         <div className="navbar" id="nav">
-          <h4 id="firstH4">/Home</h4>
+          <h1 id="theh1">/Home</h1>
           <h4 id="secondH4" className="hidden">
             code by Anii
           </h4>
