@@ -1,0 +1,27 @@
+.slide-in{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom;
+    width: 100%;
+}
+
+.slide-out{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    transform-origin: top;
+    width: 100%;
+}
+/* @keyframes slide-in{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+} */
