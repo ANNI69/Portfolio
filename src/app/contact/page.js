@@ -86,7 +86,7 @@ const Contact = () => {
                 <h6>Socials</h6>
                 <p>
                   <span>Instagram </span>
-                  <a href="https://www.instagram.com/aniruddhnagare/">
+                  <a href="https://www.instagram.com/aniiyarr/">
                     <Image
                       id="social"
                       width={100}
@@ -98,7 +98,7 @@ const Contact = () => {
                 </p>
                 <p>
                   <span>LinkedIn </span>
-                  <a href="https://www.linkedin.com/in/aniruddhnagare/">
+                  <a href="https://www.linkedin.com/in/aniruddh-nagare-698787208/">
                     <Image
                       width={100}
                       height={100}

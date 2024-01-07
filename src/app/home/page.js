@@ -198,7 +198,7 @@ const Home = () => {
             <a target="blank" href="https://twitter.com/AniruddhNagare">
               <h6>X(Twitter) ↗</h6>
             </a>
-            <a target="blank" href="https://www.instagram.com/_exotic.anii">
+            <a target="blank" href="https://www.instagram.com/aniiyarr">
               <h6>Instagram ↗</h6>
             </a>
             <a target="blank" href="https://resolutionbelike.netlify.app/">
