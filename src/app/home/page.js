@@ -105,7 +105,7 @@ const Home = () => {
           </div>
         </div>
         <div className="ticker" id="ticker">
-          <span>Anirudh nagare - Developer &amp; Freelancer</span>
+          <span> Developer &amp; Freelancer</span>
         </div>
         <div id="second">
           <div id="1sthalf">

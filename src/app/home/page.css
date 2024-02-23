@@ -420,6 +420,9 @@ body {
   font-size: 20px;
 }
 @media screen and (max-width: 768px) {
+  #aCircle{
+    display: none;
+  }
   #social,
   #About,
   #FCircle {
@@ -508,7 +511,7 @@ body {
   }
 
   #add {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 40px; /* Adjust font size for smaller screens */
   }
 
   #nav h4 {
