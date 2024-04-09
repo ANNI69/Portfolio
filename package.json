@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.16.1",
     "@studio-freight/lenis": "^1.0.29",
+    "clsx": "^2.1.0",
     "framer": "^2.4.1",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
     "jquery": "^3.7.1",
     "locomotive-scroll": "^4.1.4",
@@ -20,9 +22,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "tailwind-merge": "^2.2.2",
+    "three": "^0.163.0"
   },
   "devDependencies": {
+    "@types/node": "20.12.5",
+    "@types/react": "18.2.74",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
