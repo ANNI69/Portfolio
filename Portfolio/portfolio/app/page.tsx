@@ -61,7 +61,7 @@ export default function Home() {
           {/* <ThemeButton /> */}
           <BentoGridThirdDemo />
           {/* <div className="shadow-lg rounded-lg p-6 mb-4"></div> */}
-          <div className="shadow-lg rounded-lg p-6 mb-4">
+          <div className="ml-0 mr-0 mt-4 mb-4">
             <InfiniteMovingCards
               items={testimonials}
               direction="right"
