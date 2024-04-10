@@ -299,28 +299,6 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "AI Content Generation",
-    description: (
-      <span className="text-sm">
-        Experience the power of AI in generating unique content.
-      </span>
-    ),
-    header: <SkeletonOne />,
-    className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Automated Proofreading",
-    description: (
-      <span className="text-sm">
-        Let AI handle the proofreading of your documents.
-      </span>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
     title: "Full Stack Developeler",
     description: (
       <span className="text-sm">
@@ -344,6 +322,28 @@ const items = [
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Graphic Designer and AI Enthusiast",
+    description: (
+      <span className="text-sm">
+        Also a graphic designer with a passion for creating stunning visuals.
+      </span>
+    ),
+    header: <SkeletonTwo />,
+    className: "md:col-span-1",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Web Scraping and AI Content Generation",
+    description: (
+      <span className="text-sm">
+        Web Scraping For Data Analysis and AI Content Generation.
+      </span>
+    ),
+    header: <SkeletonOne />,
+    className: "md:col-span-1",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
 
   {
