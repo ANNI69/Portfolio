@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid"; 
+import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
 import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,
@@ -190,32 +190,32 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+        <p className="sm:text-sm hidden text-xs text-center font-semibold text-neutral-500 mt-4 ">
+          I am always hiss'ing with Python!
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+          Python
         </p>
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://www.tridentspark.com/wp-content/uploads/2023/07/mern-stack-icon-1.png"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+        <p className="sm:text-sm hidden text-xs text-center font-semibold text-neutral-500 mt-4">
+          My Mern Skills are truly 'un-fur-gettable'
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+          Mern
         </p>
       </motion.div>
       <motion.div
@@ -223,17 +223,17 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+        <p className="sm:text-sm hidden text-xs text-center font-semibold text-neutral-500 mt-4">
+          I'm feeling 'fluttery' about the future!
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+        <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Flutter
         </p>
       </motion.div>
     </motion.div>
@@ -276,7 +276,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://i.ibb.co/rfZ0YHR/151.png"
           alt="avatar"
           height="100"
           width="100"
@@ -291,7 +291,7 @@ const SkeletonFive = () => {
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
+        <p className="text-xs text-neutral-500">Use html :)</p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
@@ -321,10 +321,11 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Full Stack Developeler",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Full-stack web developer specializing in MERN and MEAN stacks.
+        Passionate about creating scalable, user-friendly web applications,
       </span>
     ),
     header: <SkeletonThree />,
@@ -332,10 +333,12 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "SkillSet's Overview ",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Proficient in Python, MERN, and Flutter for seamless cross-platform
+        application development. Let's create exceptional user experiences
+        across web and mobile.
       </span>
     ),
     header: <SkeletonFour />,
@@ -344,7 +347,7 @@ const items = [
   },
 
   {
-    title: "Text Summarization",
+    title: "Ai/ML And Web3 enthusiast",
     description: (
       <span className="text-sm">
         Summarize your lengthy documents with AI technology.

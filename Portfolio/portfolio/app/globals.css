@@ -5,7 +5,14 @@
 .black-background {
     background-color: black; 
   }
-
+@font-face {
+  font-family: 'Nexa';
+  src: url('../public/Nexa-Heavy.ttf');
+}
+@font-face {
+  font-family: 'Akira';
+  src: url('../public/Akira.otf');
+}
   @layer base {
     :root {
       --background: 0 0% 100%;
