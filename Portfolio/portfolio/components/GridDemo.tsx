@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export default function BentoGridThirdDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] dark">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -276,11 +276,11 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
       >
         <Image
-          src="https://i.ibb.co/rfZ0YHR/151.png"
+          src="https://i.ibb.co/yRw3JNV/151.gif"
           alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
+          height="150"
+          width="150"
+          className=" mix-blend-screen pt-1 rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
           There are a lot of cool framerworks out there like React, Angular,

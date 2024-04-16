@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import ThemeButton from "./ThemeButton";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,13 +28,7 @@ const Navbar = () => {
           id="navbar-solid-bg"
         ></div>
         <div className="space-x-4 flex items-center">
-          {/* <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-          >
-            <span>Aceternity UI</span>
-          </HoverBorderGradient> */}
+          <ThemeButton />
         </div>
       </div>
     </nav>

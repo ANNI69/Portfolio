@@ -57,19 +57,19 @@ export default function Home() {
         </div>
 
         <Navbar />
-        <div className="relative z-10 p-8 min-h-screen">
+        <div className="relative z-10 p-8">
           {/* <ThemeButton /> */}
           <BentoGridThirdDemo />
           {/* <div className="shadow-lg rounded-lg p-6 mb-4"></div> */}
+          {/* <BentoGridThirdDemo /> */}
+        </div>
           <div className="ml-0 mr-0 mt-4 mb-4">
             <InfiniteMovingCards
               items={testimonials}
-              direction="right"
+              direction="left"
               speed="slow"
             />
           </div>
-          {/* <BentoGridThirdDemo /> */}
-        </div>
       </div>
     </>
   );
