@@ -1,10 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "./ui/button";
-
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import React from "react";
 import ThemeButton from "./ThemeButton";
-import { useTheme } from "next-themes";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {

@@ -48,10 +48,10 @@ export default function Home() {
       title: "Python Engineer, TechStart",
     },
     // ... you can add more if you'd like
-  ];  
+  ];
   return (
     <>
-      <div className="relative" >
+      <div className="relative">
         <div className="fixed inset-0 z-0">
           <GridBackgroundDemo />
         </div>
@@ -63,13 +63,13 @@ export default function Home() {
           {/* <div className="shadow-lg rounded-lg p-6 mb-4"></div> */}
           {/* <BentoGridThirdDemo /> */}
         </div>
-          <div className="ml-0 mr-0 mt-4 mb-4">
-            <InfiniteMovingCards
-              items={testimonials}
-              direction="left"
-              speed="slow"
-            />
-          </div>
+        <div className="ml-0 mr-0 mt-4 mb-4">
+          <InfiniteMovingCards
+            items={testimonials}
+            direction="left"
+            speed="slow"
+          />
+        </div>
       </div>
     </>
   );
