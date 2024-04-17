@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import Link from "next/link";
+
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import ThemeButton from "./ThemeButton";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <nav className="border-gray-200 backdrop-blur dark:border-gray-700 sticky top-0 z-40">
@@ -21,12 +22,6 @@ const Navbar = () => {
             Aniruddh Nagare
           </span>
         </a>
-        <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto`}
-          id="navbar-solid-bg"
-        ></div>
         <div className="space-x-4 flex items-center">
           <ThemeButton />
         </div>
@@ -36,4 +31,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
