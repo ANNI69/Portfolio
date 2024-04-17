@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import ThemeButton from "./ThemeButton";
 import { useTheme } from "next-themes";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const { theme } = useTheme();
