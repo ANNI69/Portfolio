@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
 import ThemeButton from "./ThemeButton";
-import { useTheme } from "next-themes";
 
 const Navbar = () => {
-  const { theme } = useTheme();
-
   return (
     <nav className="border-gray-200 backdrop-blur dark:border-gray-700 sticky top-0 z-40">
       <div className="max-w-screen-xxl flex flex-wrap items-center justify-between  p-4 ">
