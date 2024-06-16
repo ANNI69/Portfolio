@@ -1,6 +1,6 @@
 "use client";
 import Home from '../app/home/page.js';
-import Intro from '@/app/home/Intro.js';
+import Intro from '../app/home/Intro.js';
 import React from 'react'
 import { useEffect } from "react";
 import { useState } from "react";

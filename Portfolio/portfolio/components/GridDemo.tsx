@@ -15,7 +15,7 @@ import Image from "next/image";
 export default function BentoGridThirdDemo() {
   return (
     <>
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] dark">
+      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] dark:text-white dark:bg-black white:bg-white white:text-black border-black">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -31,7 +31,7 @@ export default function BentoGridThirdDemo() {
   );
 }
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className=" border-2 flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 
 const SkeletonOne = () => {
@@ -63,8 +63,8 @@ const SkeletonOne = () => {
   return (
     <motion.div
       initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      whileHover=" animate"
+      className=" flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
       <motion.div
         variants={variants}
@@ -155,7 +155,7 @@ const SkeletonThree = () => {
         backgroundSize: "400% 400%",
       }}
     >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
+      <motion.div className=" h-full w-full rounded-lg"></motion.div>
     </motion.div>
   );
 };
@@ -315,7 +315,7 @@ const items = [
   {
     title: "SkillSet's Overview ",
     description: (
-      <span className="text-sm">
+      <span className=" text-sm">
         Proficient in Python, MERN, and Flutter for seamless cross-platform
         application development. Let's create exceptional user experiences
         across web and mobile.

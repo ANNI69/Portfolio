@@ -68,6 +68,7 @@ export default function Home() {
             items={testimonials}
             direction="left"
             speed="slow"
+            className="dark:text-white dark:bg-black white:bg-white white:text-black"
           />
         </div>
       </div>
