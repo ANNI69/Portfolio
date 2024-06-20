@@ -5,27 +5,19 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const MidPage = () => {
-  const ref = useGSAP();
-
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const textElements = ["#making", "#ss", "#year"];
 
-    const textElements = [
-      // Target each text element separately for individual control
-      "#making",
-      "#ss",
-      "#year",
-    ];
-
-    // Initial drop from above animation (optional)
+    // Initial drop from above animation
     gsap.fromTo(
       textElements,
-      { y: -200, opacity: 1 },
+      { y: -200, opacity: 0 },
       {
-      y: 0,
-      opacity: 1,
-      duration: 3, // Increase the duration to make the animation slower
-      ease: "power2.inOut",
+        y: 0,
+        opacity: 1,
+        duration: 3,
+        stagger: 0.3, // Stagger the animation for each element
+        ease: "power2.inOut",
       }
     );
 
@@ -34,12 +26,11 @@ const MidPage = () => {
       gsap.to(elementId, {
         scrollTrigger: {
           trigger: elementId,
-          start: "top top", // Fade in when element is fully visible
-          end: "bottom 70%", // Fade out when 20% below viewport
-          scrub: true, // Animate smoothly as user scrolls
-          toggleActions: "play reverse play reverse", // Reset animation on scroll back
+          start: "top 80%", // Start animation when element is 80% from the top of the viewport
+          end: "bottom 20%", // End animation when element is 20% from the bottom of the viewport
+          scrub: true, // Smooth animation as user scrolls
         },
-        opacity: 1, // Fade out on scroll trigger
+        opacity: 0, // Fade out on scroll trigger
         y: -100, // Move element upwards on scroll
         duration: 2,
         ease: "power3.out", // Adjust easing for smooth fade-out
@@ -48,18 +39,22 @@ const MidPage = () => {
   }, []);
 
   return (
-    <div id="screen" className="h-screen flex flex-col mr-5 mt-10">
+    <div
+      id="screen"
+      className="h-screen flex flex-col justify-center items-end mr-5 mt-10"
+    >
       <p
         id="text"
-        className="dark:text-white white:text-black text-9xl text-right font-[Akira]">
-        <span id="making">Building</span>{" "}
-        <span id="ss">
-          {" "}
-          <br /> S#it Since
-        </span>{" "}
-        <span id="year">
-          <br />
-          2020 .
+        className="dark:text-white text-black text-right font-[Akira] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight"
+      >
+        <span id="making" className="block">
+          Building
+        </span>
+        <span id="ss" className="block">
+          S#it Since
+        </span>
+        <span id="year" className="block">
+          2020.
         </span>
       </p>
     </div>

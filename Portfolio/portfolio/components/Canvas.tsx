@@ -14,7 +14,7 @@ export function CanvasRevealEffectDemo() {
           />
         </Card>
         <Card
-          to="/app"
+          to="/application"
           title="Application Development"
           icon={<AceternityIcon />}
         >

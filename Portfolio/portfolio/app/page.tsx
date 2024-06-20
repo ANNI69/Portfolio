@@ -6,7 +6,6 @@ import MidPage from "@/components/MidPage";
 import { CanvasRevealEffectDemo } from "@/components/Canvas";
 import AnimatedPinDemo from "@/components/3dPin";
 
-
 export default function Home() {
   // const testimonials = [
   //   {
@@ -50,18 +49,16 @@ export default function Home() {
   return (
     <>
       <div className="relative">
-        <div className="fixed inset-0 z-0">
+        <div className="fixed inset-0 z-0 pointer-events-none">
           <GridBackgroundDemo />
         </div>
 
-        <Navbar />
-        <div className=" relative z-10">
-          <MidPage />
-          {/* <ThemeButton /> */}
-          <CanvasRevealEffectDemo />
-          {/* <BentoGridThirdDemo /> */}
-          {/* <div className="shadow-lg rounded-lg p-6 mb-4"></div> */}
-          {/* <BentoGridThirdDemo /> */}
+        <div className="relative z-10 h-screen overflow-y-auto">
+          <Navbar />
+          <div>
+            <MidPage />
+            <CanvasRevealEffectDemo />
+          </div>
         </div>
       </div>
     </>
