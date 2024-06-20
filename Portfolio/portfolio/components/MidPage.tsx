@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const MidPage = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const MidPage = () => {
     // Initial drop from above animation
     gsap.fromTo(
       textElements,
-      { y: -200, opacity: 0 },
+      { y: -100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -43,6 +44,15 @@ const MidPage = () => {
       id="screen"
       className="h-screen flex flex-col justify-center items-end mr-5 mt-10"
     >
+      <div className="">
+        <Avatar>
+          <AvatarImage
+            className=""
+            src="https://github.com/shadcn.png"
+          />
+          <AvatarFallback>AN</AvatarFallback>
+        </Avatar>
+      </div>
       <p
         id="text"
         className="dark:text-white text-black text-right font-[Akira] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight"
