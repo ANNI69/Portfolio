@@ -15,7 +15,7 @@ import Image from "next/image";
 export default function BentoGridThirdDemo() {
   return (
     <>
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] dark:text-white dark:bg-black white:bg-white white:text-black border-black">
+      <BentoGrid className="scale-125 max-w-4xl mx-auto md:auto-rows-[20rem] dark:text-white dark:bg-black white:bg-white white:text-black border-black bg-opacity-0">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
