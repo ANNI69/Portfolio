@@ -1,72 +1,85 @@
 "use client";
-import React, { useEffect } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
+import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const MidPage = () => {
-  useEffect(() => {
-    const textElements = ["#making", "#ss", "#year"];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
-    // Initial drop from above animation
-    gsap.fromTo(
-      textElements,
-      { y: -100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 3,
-        stagger: 0.3, // Stagger the animation for each element
-        ease: "power2.inOut",
-      }
-    );
+  const lineVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
 
-    // Scroll animations with fade-in and fade-out on scroll trigger
-    textElements.forEach((elementId) => {
-      gsap.to(elementId, {
-        scrollTrigger: {
-          trigger: elementId,
-          start: "top 80%", // Start animation when element is 80% from the top of the viewport
-          end: "bottom 20%", // End animation when element is 20% from the bottom of the viewport
-          scrub: true, // Smooth animation as user scrolls
-        },
-        opacity: 0, // Fade out on scroll trigger
-        y: -100, // Move element upwards on scroll
-        duration: 2,
-        ease: "power3.out", // Adjust easing for smooth fade-out
-      });
-    });
-  }, []);
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+  };
+
+  const AnimatedText = ({
+    text,
+    className,
+  }: {
+    text: string;
+    className: string;
+  }) => (
+    <motion.span className={className} variants={lineVariants}>
+      {text.split("").map((char, index) => (
+        <motion.span
+          key={index}
+          variants={letterVariants}
+          style={{ display: "inline-block" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
 
   return (
     <div
       id="screen"
-      className="h-screen flex flex-col justify-center items-end mr-5 mt-10"
+      className="h-screen flex flex-col justify-center items-end mr-5 mt-10 pb-20"
     >
       <div className="">
         <Avatar>
-          <AvatarImage
-            className=""
-            src="https://github.com/shadcn.png"
-          />
-          <AvatarFallback>AN</AvatarFallback>
+          <AvatarImage className="" src="https://github.com/shadcn.png" />
         </Avatar>
       </div>
-      <p
+      <motion.p
         id="text"
-        className="dark:text-white text-black text-right font-[Akira] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight"
+        className="mb-4 dark:text-white text-black text-right font-[Akira] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
-        <span id="making" className="block">
-          Building
-        </span>
-        <span id="ss" className="block">
-          S#it Since
-        </span>
-        <span id="year" className="block">
-          2020.
-        </span>
-      </p>
+        <AnimatedText text="Building" className="block" />
+        <AnimatedText text="S#it" className="block" />
+        <AnimatedText text="Since" className="block" />
+        <AnimatedText text="2020." className="block" />
+      </motion.p>
     </div>
   );
 };
