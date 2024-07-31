@@ -337,23 +337,23 @@ export const DATA = {
       image:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
       links: [],
-    // },
-    // {
-      title: "Vivekanand Education Society's Institute of Technology, Technothon 23",
-      dates: "April 11th, 2013",
-      location: "Chembur, Mumbai",
-      description:
-        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
-      links: [
-        {
-          title: "Github",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
-        },
-      ],
     },
+    // {
+    //   title: "Vivekanand Education Society's Institute of Technology, Technothon 23",
+    //   dates: "April 11th, 2013",
+    //   location: "Chembur, Mumbai",
+    //   description:
+    //     "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
+    //   image:
+    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
+    //   links: [
+    //     {
+    //       title: "Github",
+    //       icon: <Icons.github className="h-4 w-4" />,
+    //       href: "https://github.com/cryptotrends/cryptotrends",
+    //     },
+    //   ],
+    // },
     // {
     //   title: "HackDavis",
     //   dates: "January 20th - 21st, 2018",
