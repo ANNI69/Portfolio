@@ -1,5 +1,3 @@
-<div align="center">
-
 # Portfolio 
 (https://nagareaniruddh.vercel.app/)
 
