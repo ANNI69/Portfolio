@@ -9,7 +9,7 @@ export const DATA = {
   location: "Thane, Maharashtra",
   locationLink: "https://www.google.com/maps/place/thane",
   description:
-    "I am a Full Stack Developer, who loves to build things. I have been working with React, Node.js, and MongoDB for the past 2 years. I am currently working as a Software Engineer at Aveum Technologies.",
+    "I am a Full Stack Developer, who loves to build things. I have been working with React, Node.js, and MongoDB for the past 2 years. I am currently working as a IT Intern at Aveum Technologies.",
   summary:
     " I am a 20-year-old Full Stack Developer currently completing my Bachelor of Engineering from DMCE. My educational journey began in 2021 with a diploma in Information Technology from Vidyalankar Polytechnic, after which I gained admission to DMCE. Throughout this time, I have acquired numerous skills and developed a variety of projects ",
   avatarUrl: "/me.png",
@@ -57,18 +57,13 @@ export const DATA = {
 
         navbar: true,
       },
-      // Youtube: {
-      //   name: "Youtube",
-      //   url: "https://dub.sh/dillion-youtube",
-      //   icon: Icons.youtube,
-      //   navbar: true,
-      // },
-      email: {
-        name: "Send Email",
-        url: "codebyanii@gmail.com",
-        icon: Icons.email,
+      leetcode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/AniruddhNagare/",
+        icon: Icons.LeetCode,
         navbar: true,
-      },
+      }
+      
     },
   },
 
@@ -306,6 +301,17 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Web Cade",
+      dates: "September 13th - 14th, 2024",
+      location: "St. John College of Engineering and Technology, Palghar",
+      description:
+        "Cross Border Ecommerce Solution for Small Businesses. To Expand Their Business Globally.",
+      image:
+        "https://i.ibb.co/hmmnPjQ/Whats-App-Image-2024-10-11-at-11-54-53-AM.jpg",
+      mlh: "https://in.linkedin.com/company/st-john-college-of-engineering-and-management",
+      links: [],
+    },
+    {
       title: "Coherence",
       dates: "March 23rd - 24th, 2024",
       location: "Vidyavaridhi College of Engineering and Technology, Vasai",
@@ -335,7 +341,7 @@ export const DATA = {
         "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
       icon: "public",
       image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkUXO9Kfj6AOWq_D7XjzAMmJop57DmDUQmnQ&s",
       links: [],
     },
     // {
