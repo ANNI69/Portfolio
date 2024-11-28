@@ -200,7 +200,7 @@ export const DATA = {
         {
           type: "Website",
           href: "https://projectunishare.vercel.app",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "https://www.pinoylinux.org/wp-content/uploads/2023/08/MERN.jpg",
@@ -225,11 +225,6 @@ export const DATA = {
         "Magic UI",
       ],
       links: [
-        {
-          type: "Website",
-          href: "https://h2-0.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
         {
           type: "Source",
           href: "https://github.com/ANNI69/h2.0",
@@ -259,11 +254,6 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "animechan.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
           href: "https://github.com/ANNI69/animechan",
           icon: <Icons.github className="size-3" />,
@@ -272,35 +262,31 @@ export const DATA = {
       image: "https://www.cloudwards.net/wp-content/uploads/2023/10/Where-to-Watch-Anime-for-Free.png",
       video: "",
     },
-    // {
-    //   title: "Automatic Chat",
-    //   href: "https://automatic.chat",
-    //   dates: "April 2023 - March 2024",
-    //   active: true,
-    //   description:
-    //     "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-    //   technologies: [
-    //     "Next.js",
-    //     "Typescript",
-    //     "PostgreSQL",
-    //     "Prisma",
-    //     "TailwindCSS",
-    //     "Shadcn UI",
-    //     "Magic UI",
-    //     "Stripe",
-    //     "Cloudflare Workers",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://automatic.chat",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //   ],
-    //   image: "",
-    //   video:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    // },
+    {
+      title: "Panels Clone | React Native and Clerk",
+      href: "https://github.com/ANNI69/MKBHD-Panels-ReactNative-Clone-With-Clerk.git",
+      dates: "Sept 2024 - Dec 2024",
+      active: false,
+      description:
+        "Developed a clone of the Panels App by MKBHD using React Native and Clerk. The application is A Wallpaper Providing App.",
+      technologies: [
+        "React Native",
+        "Typescript",
+        "Firebase",
+        "Clerk",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://automatic.chat",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://i.ytimg.com/vi/65ciAONXv0M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCs32a-FC2xpsh7quqSpgr__UylgA",
+      video:
+        "",
+    },
   ],
   hackathons: [
     {
