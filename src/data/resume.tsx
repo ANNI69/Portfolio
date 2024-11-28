@@ -279,7 +279,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://automatic.chat",
+          href: "https://github.com/ANNI69/MKBHD-Panels-ReactNative-Clone-With-Clerk.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
