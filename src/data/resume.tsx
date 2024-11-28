@@ -1,6 +1,7 @@
 import { Icons } from "@/components/icons";
 import { ResumeIcon } from "@radix-ui/react-icons";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
+import { title } from "process";
 
 export const DATA = {
   name: "Aniruddh Nagare",
@@ -9,22 +10,19 @@ export const DATA = {
   location: "Thane, Maharashtra",
   locationLink: "https://www.google.com/maps/place/thane",
   description:
-    "I am a Full Stack Developer, who loves to build things. I have been working with React, Node.js, and MongoDB for the past 2 years. I am currently working as a IT Intern at Aveum Technologies.",
+    "I'm a Developer in my 20s pursuing My Bachelor Degree at DMCE, with a strong foundation in technology that began in 2021 with a diploma in Information Technology from Vidyalankar Polytechnic. My academic journey has been marked by continuous skill development and a diverse project portfolio. Currently, I'm broadening my expertise by diving deep into System Design and software architecture, while leveraging my skills in React, Node.js, React Native, and Go to create robust, scalable applications",
   summary:
-    " I am a 20-year-old Full Stack Developer currently completing my Bachelor of Engineering from DMCE. My educational journey began in 2021 with a diploma in Information Technology from Vidyalankar Polytechnic, after which I gained admission to DMCE. Throughout this time, I have acquired numerous skills and developed a variety of projects ",
+    "As a passionate Developer, I thrive on building innovative technology solutions. With lumpsome of hands-on experience working with React, Node.js, and MongoDB, I'm currently advancing my skills as an IT Intern at Aveum Technologies. My technical toolkit has expanded to include React Native and flutter for mobile development and Golang for backend programming, reflecting my commitment to continuous learning and technological growth ",
   avatarUrl: "/me.png",
   skills: [
-    "React",
     "Next.js",
-    "Typescript",
     "Node.js",
     "Python",
-    "Go",
+    "Golang",
     "Postgres",
     "Docker",
-    "Kubernetes",
+    "AWS",
     "Java",
-    "C++",
   ],
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
@@ -62,8 +60,13 @@ export const DATA = {
         url: "https://leetcode.com/u/Anii77/",
         icon: Icons.LeetCode,
         navbar: true,
+      },
+      instagram:{
+        name: "Instagram",
+        url: "https://www.instagram.com/framesbyanii/",
+        icon: Icons.Instagram,
+        navbar: true,
       }
-      
     },
   },
 
@@ -200,9 +203,9 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "https://www.pinoylinux.org/wp-content/uploads/2023/08/MERN.jpg",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
     {
       title: "Feed Forward",
@@ -233,8 +236,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "https://media.licdn.com/dms/image/D4E12AQEIIDCbb5draA/article-cover_image-shrink_720_1280/0/1696065152678?e=2147483647&v=beta&t=vplfPARtNBS22Cj-JVaqLwndsIwkKLcJpAjwNOyphDc",
+      video: "",
     },
     {
       title: "AnimeChan",
@@ -266,8 +269,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "https://www.cloudwards.net/wp-content/uploads/2023/10/Where-to-Watch-Anime-for-Free.png",
+      video: "",
     },
     // {
     //   title: "Automatic Chat",
@@ -301,6 +304,16 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Mumbai Hacks 2024 ",
+      dates: "October 11th - 13th, 2024",
+      location: "Mumbai",
+      description:
+        "Developed a Cross Platform Mobile Application With Flutter and Ollama for Detecting Food Adulteration.",
+      image: "https://mumbaihacks.com/_next/static/media/logo_team_dark.c05d6a0d.svg",
+      mlh: "https://mumbaihacks.com/",
+      links: [],
+    },
+    {
       title: "Web Cade",
       dates: "September 13th - 14th, 2024",
       location: "St. John College of Engineering and Technology, Palghar",
@@ -324,7 +337,7 @@ export const DATA = {
     },
     {
       title: "Datta Meghe College of Engineering, Hackathon 2.0",
-      dates: "September 14th - 16th, 2018",
+      dates: "September 14th - 16th, 2024",
       location: "Airoli, Navi Mumbai",
       description:
         "Feed Forward is a web application that helps to manage the excess food from the events and parties. The application was built using NextJS, Node.js, and MongoDB.",
