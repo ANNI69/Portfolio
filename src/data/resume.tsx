@@ -3,6 +3,8 @@ import { ResumeIcon } from "@radix-ui/react-icons";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 import { title } from "process";
 
+// I'm currently advancing my skills as an IT Intern at Aveum Technologies
+
 export const DATA = {
   name: "Aniruddh Nagare",
   initials: "AN",
@@ -10,19 +12,21 @@ export const DATA = {
   location: "Thane, Maharashtra",
   locationLink: "https://www.google.com/maps/place/thane",
   description:
-    "I'm a Developer in my 20s pursuing My Bachelor Degree at DMCE, with a strong foundation in technology that began in 2021 with a diploma in Information Technology from Vidyalankar Polytechnic. My academic journey has been marked by continuous skill development and a diverse project portfolio. Currently, I'm broadening my expertise by diving deep into System Design and software architecture, while leveraging my skills in React, Node.js, React Native, and Go to create robust, scalable applications",
+    "I'm a Developer in my 20s pursuing My Bachelor Degree at DMCE. My academic journey has been marked by continuous skill development and a diverse project portfolio. Currently, I'm broadening my expertise by diving deep into System Design and software architecture.",
   summary:
-    "As a passionate Developer, I thrive on building innovative technology solutions. With lumpsome of hands-on experience working with React, Node.js, and MongoDB, I'm currently advancing my skills as an IT Intern at Aveum Technologies. My technical toolkit has expanded to include React Native and flutter for mobile development and Golang for backend programming, reflecting my commitment to continuous learning and technological growth ",
+    "As a passionate Developer, I thrive on building innovative technology solutions. With lumpsome of hands-on experience working with React, Node.js, and MongoDB, My technical toolkit has expanded to include React Native and flutter for mobile development and Golang for backend programming, reflecting my commitment to continuous learning and technological growth ",
   avatarUrl: "/me.png",
   skills: [
     "Next.js",
     "Node.js",
+    "Django",
+    "React Native",
+    "Flutter",
+    "Firebase",
+    "Postgres",
+    "Java",
     "Python",
     "Golang",
-    "Postgres",
-    "Docker",
-    "AWS",
-    "Java",
   ],
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
@@ -61,12 +65,12 @@ export const DATA = {
         icon: Icons.LeetCode,
         navbar: true,
       },
-      instagram:{
-        name: "Instagram",
-        url: "https://www.instagram.com/framesbyanii/",
-        icon: Icons.Instagram,
-        navbar: true,
-      }
+      // instagram:{
+      //   name: "Instagram",
+      //   url: "https://www.instagram.com/framesbyanii/",
+      //   icon: Icons.Instagram,
+      //   navbar: true,
+      // }
     },
   },
 
@@ -182,7 +186,7 @@ export const DATA = {
     {
       title: "UNiShare",
       href: "https://projectunishare.vercel.app",
-      dates: "July 2024 - Currently",
+      dates: "July 2024 - September 2024",
       active: true,
       description:
         "Developed a web application for students to share their notes and study materials. The application was built using React, Node.js, and MongoDB.",
@@ -198,7 +202,7 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://projectunishare.vercel.app",
           icon: <Icons.github className="size-3" />,
         },
@@ -206,61 +210,6 @@ export const DATA = {
       image: "https://www.pinoylinux.org/wp-content/uploads/2023/08/MERN.jpg",
       video:
         "",
-    },
-    {
-      title: "Feed Forward",
-      href: "https://h2-0.vercel.app/",
-      dates: "June 2023 - July 2023",
-      active: true,
-      description:
-        "Developed A Web App For Manage The Excess Food From The Events And Parties. The Application Was Built Using NextJS, Node.js, And MongoDB.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ANNI69/h2.0",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "https://media.licdn.com/dms/image/D4E12AQEIIDCbb5draA/article-cover_image-shrink_720_1280/0/1696065152678?e=2147483647&v=beta&t=vplfPARtNBS22Cj-JVaqLwndsIwkKLcJpAjwNOyphDc",
-      video: "",
-    },
-    {
-      title: "AnimeChan",
-      href: "animechan.vercel.app",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed a web application for users to watch anime and read manga. The application was built using NextJS, ShadCN , Node.js, and MongoDB.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ANNI69/animechan",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "https://www.cloudwards.net/wp-content/uploads/2023/10/Where-to-Watch-Anime-for-Free.png",
-      video: "",
     },
     {
       title: "Panels Clone | React Native and Clerk",
@@ -287,6 +236,59 @@ export const DATA = {
       video:
         "",
     },
+    {
+      title: "Feed Forward",
+      href: "https://github.com/ANNI69/h2.0",
+      dates: "April 2023 - June 2023",
+      active: true,
+      description:
+        "Developed A Web App For Manage The Excess Food From The Events And Parties. The Application Was Built Using NextJS, Node.js, And MongoDB.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "MongoDB",
+        "Prisma",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/h2.0",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://media.licdn.com/dms/image/D4E12AQEIIDCbb5draA/article-cover_image-shrink_720_1280/0/1696065152678?e=2147483647&v=beta&t=vplfPARtNBS22Cj-JVaqLwndsIwkKLcJpAjwNOyphDc",
+      video: "",
+    },
+    {
+      title: "AnimeChan",
+      href: "https://github.com/ANNI69/animechan",
+      dates: "January 2024 - March 2024",
+      active: true,
+      description:
+        "A web application to watch anime and read manga. The application was built using NextJS, ShadCN , Node.js, and MongoDB.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "MongoDB",
+        "Prisma",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/animechan",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://www.cloudwards.net/wp-content/uploads/2023/10/Where-to-Watch-Anime-for-Free.png",
+      video: "",
+    },
+    
   ],
   hackathons: [
     {
