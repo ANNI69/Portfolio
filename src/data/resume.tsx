@@ -244,13 +244,11 @@ export const DATA = {
       description:
         "Developed A Web App For Manage The Excess Food From The Events And Parties. The Application Was Built Using NextJS, Node.js, And MongoDB.",
       technologies: [
-        "Next.js",
+        "ReactJs",
         "Typescript",
         "MongoDB",
-        "Prisma",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
@@ -273,10 +271,10 @@ export const DATA = {
         "Next.js",
         "Typescript",
         "MongoDB",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
         "Magic UI",
+        "Prisma",
+        "Shadcn UI",
+        "TailwindCSS",
       ],
       links: [
         {
