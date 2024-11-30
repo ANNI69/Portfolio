@@ -185,7 +185,7 @@ export const DATA = {
   projects: [
     {
       title: "UNiShare",
-      href: "https://projectunishare.vercel.app",
+      href: "https://github.com/ANNI69/Unishare.git",
       dates: "July 2024 - September 2024",
       active: true,
       description:
@@ -203,7 +203,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://projectunishare.vercel.app",
+          href: "https://github.com/ANNI69/Unishare.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
