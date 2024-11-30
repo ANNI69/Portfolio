@@ -1,7 +1,5 @@
 import { Icons } from "@/components/icons";
 import { ResumeIcon } from "@radix-ui/react-icons";
-import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
-import { title } from "process";
 
 // I'm currently advancing my skills as an IT Intern at Aveum Technologies
 
