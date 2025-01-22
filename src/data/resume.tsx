@@ -74,6 +74,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Efficienergi",
+      href: "https://efficienergi.com/",
+      badges: [],
+      location: "In-Office",
+      title: "SDE Intern",
+      logoUrl: "https://media.licdn.com/dms/image/v2/C510BAQGiUvVpnaiaUg/company-logo_200_200/company-logo_200_200/0/1631398233605/efficienergi_logo?e=2147483647&v=beta&t=1_NLWXa7lPHFU_r0QGmT3L-UjTpHAPsnuksrlOpHy3g",
+      start: "Dec 2024",
+      end: "Mar 2025",
+      description:
+        "Developed a flutter application for the company's internal use. The application was built using Flutter, and SQLite. The application was used to carry out test on Data centers Panels and other equipment and the data used to generate report on the test",
+    },
+    {
       company: "Aveum Technologies",
       href: "https://aevumsolutions.com/",
       badges: [],
