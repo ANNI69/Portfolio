@@ -79,7 +79,7 @@ export const DATA = {
       badges: [],
       location: "In-Office",
       title: "SDE Intern",
-      logoUrl: "https://media.licdn.com/dms/image/v2/C510BAQGiUvVpnaiaUg/company-logo_200_200/company-logo_200_200/0/1631398233605/efficienergi_logo?e=2147483647&v=beta&t=1_NLWXa7lPHFU_r0QGmT3L-UjTpHAPsnuksrlOpHy3g",
+      logoUrl: "/ecpl.png",
       start: "Dec 2024",
       end: "Mar 2025",
       description:
