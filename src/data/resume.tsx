@@ -34,7 +34,6 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "https://drive.google.com/file/d/17Wg5VQvE03wxrxSVK5-HSyn2xQkE-_hQ/view", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
-    { href: "#", icon: Icons.Codeforces, label: "Codeforces" },
   ],
   contact: {
     email: "codebyanii@gmail.com",
@@ -69,13 +68,13 @@ export const DATA = {
       },
       Codechef:{
         name: "Codechef",
-        url: "https://www.instagram.com/framesbyanii/",
+        url: "https://www.codechef.com/users/aniiruddh",
         icon: Icons.codechef,
         navbar: true,
       },
-      codeforces:{
+      Codeforces:{
         name: "Codeforce",
-        url: "https://www.instagram.com/framesbyanii/",
+        url: "https://codeforces.com/profile/codebyanii",
         icon: Icons.codeforces,
         navbar: true,
       }
