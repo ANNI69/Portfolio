@@ -5,7 +5,7 @@ import { Code2Icon, NotebookIcon } from "lucide-react";
 // I'm currently advancing my skills as an IT Intern at Aveum Technologies
 
 export const DATA = {
-  name: "Aniruddh Nagare",
+  name: "Aniruddh D. Nagare",
   initials: "AN",
   url: "https://codebyanii.vercel.app",
   location: "Thane, Maharashtra",
@@ -28,11 +28,15 @@ export const DATA = {
     "Java",
     "Python",
     "Golang",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+
   ],
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    { href: "https://drive.google.com/file/d/17Wg5VQvE03wxrxSVK5-HSyn2xQkE-_hQ/view", icon: ResumeIcon, label: "Resume" },
+    { href: "/blog", icon: Icons.blog, label: "Blog" },
+    { href: "https://drive.google.com/file/d/1uO3IGUohuBzUhDVrlGybamalCwEnNqtF/view?usp=drive_link", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
   ],
   contact: {
@@ -86,7 +90,7 @@ export const DATA = {
       company: "Efficienergi",
       href: "https://efficienergi.com/",
       badges: [],
-      location: "In-Office",
+      location: "Mulund, Mumbai - In-Office",
       title: "SDE Intern",
       logoUrl: "/ecpl.png",
       start: "Dec 2024",
@@ -98,7 +102,7 @@ export const DATA = {
       company: "Aveum Technologies",
       href: "https://aevumsolutions.com/",
       badges: [],
-      location: "Remote",
+      location: "Bhandup, Mumbai - Remote",
       title: "IT Intern",
       logoUrl: "/atomic.jpeg",
       start: "June 2023",
@@ -110,7 +114,7 @@ export const DATA = {
       company: "CrossAsyst",
       badges: [],
       href: "https://www.crossasyst.com/",
-      location: "Remote",
+      location: "Mindspace Airoli, Navi Mumbai - Remote",
       title: "Java Developer",
       logoUrl: "/crossassyst.png",
       start: "May 2022",
@@ -118,18 +122,18 @@ export const DATA = {
       description:
         "Developed a Spring Boot Auction System for the company.The System was used to manage the Auctions and the Bids.",
     },
-    // {
-    //   company: "Nvidia",
-    //   href: "https://nvidia.com/",
-    //   badges: [],
-    //   location: "Santa Clara, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/nvidia.png",
-    //   start: "January 2020",
-    //   end: "April 2020",
-    //   description:
-    //     "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    // },
+    {
+      company: "Arcut Media Group",
+      href: "https://www.arcotgroup.com/",
+      badges: [],
+      location: "Lower Parel, Mumbai - Remote",
+      title: "Wordpress Developer",
+      logoUrl: "/arcut.jpg",
+      start: "March 2021",
+      end: "May 2021",
+      description:
+        "Developed a Wordpress website for the company. The website was used to manage the company's clients. The website was built using Wordpress, HTML, CSS, and JavaScript.",
+    },
     // {
     //   company: "Splunk",
     //   href: "https://splunk.com",
@@ -202,6 +206,49 @@ export const DATA = {
     // },
   ],
   projects: [
+    {
+      title: "Grocery Shopping App",
+      href: "https://github.com/ANNI69/Grocery-App.git",
+      dates: "May 2025 - June 2025",
+      active: true,
+      description:
+        "Developed a web application for students to share their notes and study materials. The application was built using React, Node.js, and MongoDB.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Stripe",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/Unishare.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://grocery-stripe.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Post",
+          href: "",
+          icon: <Icons.x className="size-3" />,
+        },
+        {
+          type: "Blog",
+          href: "",
+          icon: <Icons.blog className="size-3" />,
+        },
+      ],
+      image: "https://www.pinoylinux.org/wp-content/uploads/2023/08/MERN.jpg",
+      video:
+        "",
+    },
     {
       title: "UNiShare",
       href: "https://github.com/ANNI69/Unishare.git",
