@@ -1,5 +1,6 @@
-import { Icons } from "@/components/icons";
+import { Icons,  } from "@/components/icons";
 import { ResumeIcon } from "@radix-ui/react-icons";
+import { Code2Icon, NotebookIcon } from "lucide-react";
 
 // I'm currently advancing my skills as an IT Intern at Aveum Technologies
 
@@ -10,17 +11,19 @@ export const DATA = {
   location: "Thane, Maharashtra",
   locationLink: "https://www.google.com/maps/place/thane",
   description:
-    "I'm a Developer in my 20s pursuing My Bachelor Degree at DMCE. My academic journey has been marked by continuous skill development and a diverse project portfolio. Currently, I'm broadening my expertise by diving deep into System Design and software architecture.",
+    "Final-year CSE student with student with proven expertise in building scalable web applications, cross-platform mobile apps, and cloud-native solutions through 4 successful IT industry internships and hackathon participations.",
   summary:
-    "As a passionate Developer, I thrive on building innovative technology solutions. With lumpsome of hands-on experience working with React, Node.js, and MongoDB, My technical toolkit has expanded to include React Native and flutter for mobile development and Golang for backend programming, reflecting my commitment to continuous learning and technological growth ",
+    "As a passionate Developer, I thrive on building innovative technology solutions. With lumpsome of hands-on experience working with React, Node.js, and MongoDB, My technical toolkit has expanded to include React Native and flutter for mobile development and Javascript for backend programming, reflecting my commitment to continuous learning and technological growth ",
   avatarUrl: "/me.png",
   skills: [
     "Next.js",
     "Node.js",
     "Django",
+    "Flask",
     "React Native",
     "Flutter",
     "Firebase",
+    "Supabase",
     "Postgres",
     "Java",
     "Python",
@@ -28,9 +31,10 @@ export const DATA = {
   ],
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "https://drive.google.com/file/d/17Wg5VQvE03wxrxSVK5-HSyn2xQkE-_hQ/view", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
+    { href: "#", icon: Icons.Codeforces, label: "Codeforces" },
   ],
   contact: {
     email: "codebyanii@gmail.com",
@@ -63,12 +67,18 @@ export const DATA = {
         icon: Icons.LeetCode,
         navbar: true,
       },
-      // instagram:{
-      //   name: "Instagram",
-      //   url: "https://www.instagram.com/framesbyanii/",
-      //   icon: Icons.Instagram,
-      //   navbar: true,
-      // }
+      Codechef:{
+        name: "Codechef",
+        url: "https://www.instagram.com/framesbyanii/",
+        icon: Icons.codechef,
+        navbar: true,
+      },
+      codeforces:{
+        name: "Codeforce",
+        url: "https://www.instagram.com/framesbyanii/",
+        icon: Icons.codeforces,
+        navbar: true,
+      }
     },
   },
 
@@ -296,7 +306,7 @@ export const DATA = {
       image: "https://www.cloudwards.net/wp-content/uploads/2023/10/Where-to-Watch-Anime-for-Free.png",
       video: "",
     },
-    
+
   ],
   hackathons: [
     {
