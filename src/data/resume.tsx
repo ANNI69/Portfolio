@@ -226,7 +226,7 @@ export const DATA = {
       links: [
         {
           type: "Source",
-          href: "https://github.com/ANNI69/Unishare.git",
+          href: "https://github.com/ANNI69/Grocery-App.git",
           icon: <Icons.github className="size-3" />,
         },
         {
@@ -236,16 +236,16 @@ export const DATA = {
         },
         {
           type: "Post",
-          href: "",
+          href: "https://x.com/AniruddhNagare/status/1938707104770175225",
           icon: <Icons.x className="size-3" />,
         },
         {
           type: "Blog",
-          href: "",
+          href: "https://nagareaniruddh.vercel.app/blog/grocery-stripe",
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "https://www.pinoylinux.org/wp-content/uploads/2023/08/MERN.jpg",
+      image: "/homePageGS.png",
       video:
         "",
     },

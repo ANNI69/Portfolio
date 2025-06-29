@@ -1,0 +1,132 @@
+---
+title: "Simulating Interviews with AI: Aniruddh's Mock Interviewer Using Vapi + Firebase"
+author: "Aniruddh Nagare"
+publishedAt: "2025-06-22"
+tags: ["AI", "MockInterview", "Vapi", "Firebase", "Voice AI", "InterviewPrep"]
+image: "./ai-mock-interviewer-thumbnail.png"
+---
+
+import Image from 'next/image'
+
+# 🎤 AI Mock Interviewer for Smarter Placement Prep
+
+> 🚀 Originally shared on [X by Aniruddh Nagare](https://x.com/AniruddhNagare/status/1938359487276191972)
+
+Just in time for the placement season, I built an **AI-powered mock interviewer** using **Vapi (Voice AI)** and **Firebase Firestore**. This tool simulates real interview scenarios by talking, listening, and giving feedback — just like a real interviewer, but on-demand. 🧠💻
+
+---
+
+## 🧩 Key Features
+
+- 🎙️ **Voice-based Interview Simulation** using [Vapi](https://www.vapi.ai/)
+- 🛠️ **Realtime Data Storage** using Firebase Firestore
+- 🧠 **AI-generated questions & responses**
+- 📈 **Feedback mechanism** to improve user performance
+- 💡 Built with simplicity and functionality in mind — no fluff
+
+---
+
+## 📸 Screenshot
+![Homepage](https://i.postimg.cc/GmzTkcP8/screencapture-hireflow-in-vercel-app-2025-06-29-15-52-12.png)
+![Interview](https://i.postimg.cc/LswXThJX/screencapture-hireflow-in-vercel-app-interview-2025-06-29-15-54-20.png)
+![Feedback](https://i.postimg.cc/Gm0nqYQ6/screencapture-hireflow-in-vercel-app-interview-ztl-J1j47y-Y1-TJyi-Fz9-Gj-feedback-2025-06-29-15-59-57.png)
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + Tailwind CSS
+- **Voice AI**: [Vapi](https://www.vapi.ai/)
+- **Database**: Firebase Firestore
+- **Realtime Feedback**: AI + simple scoring heuristics
+
+---
+
+## 📚 Implementation Guide (Simplified)
+
+### 1. 🔌 Set up Firebase Firestore
+```bash
+npm install firebase
+```
+
+**firebase.ts**
+```ts
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-app.firebaseapp.com",
+  projectId: "your-project-id",
+};
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+```
+
+---
+
+### 2. 🧠 Connect Vapi to React
+
+```bash
+npm install vapi-sdk
+```
+
+**useInterview.ts**
+```ts
+import { Vapi } from 'vapi-sdk';
+
+const vapi = new Vapi("your-vapi-key");
+
+export const startInterview = (onResult) => {
+  vapi.ask({ prompt: "Start mock interview" }, onResult);
+};
+```
+
+---
+
+### 3. 🎧 UI Logic to Display Feedback
+```tsx
+import { useState } from 'react';
+import { startInterview } from './useInterview';
+
+export default function Interviewer() {
+  const [feedback, setFeedback] = useState("");
+
+  const handleInterview = () => {
+    startInterview((result) => {
+      setFeedback(result.text);
+    });
+  };
+
+  return (
+    <div className="p-4">
+      <button onClick={handleInterview} className="btn">Start Interview</button>
+      <p className="mt-4">Feedback: {feedback}</p>
+    </div>
+  );
+}
+```
+
+---
+
+## 🌐 Broader Context
+
+This AI mock interviewer is part of a broader trend — tools like **Interviews by AI**, **Pramp**, and **Interview Warmup** — all aim to:
+
+- Reduce anxiety through practice
+- Provide instant feedback
+- Help job-seekers prepare in realistic scenarios
+
+In today's competitive and post-recession job market, AI-driven preparation can offer a strategic edge.
+
+---
+
+## 🧠 Final Thoughts
+
+> Nerdy prep, smarter grind. 💻🧠
+
+Whether you're preparing for campus placements or brushing up for a role switch — having an on-demand mock interviewer that listens and gives feedback is a game changer.
+
+📬 DM me on [X](https://x.com/aniruddhnagare) if you want help building your own version!
