@@ -207,12 +207,53 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Grocery Shopping App",
-      href: "https://github.com/ANNI69/Grocery-App.git",
+      title: "Ai Voice Recruiter",
+      href: "https://github.com/ANNI69/HireFlow-AiRecruiter.git",
       dates: "May 2025 - June 2025",
       active: true,
-      description:
-        "Developed a web application for students to share their notes and study materials. The application was built using React, Node.js, and MongoDB.",
+      description:"Just in time for the placement season, I built an AI-powered mock interviewer using Vapi (Voice AI) and Firebase Firestore. This tool simulates real interview scenarios by talking, listening, and giving feedback — just like a real interviewer, but on-demand. 🧠💻",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Stripe",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/HireFlow-AiRecruiter.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://hireflow-in.vercel.app//",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Post",
+          href: "https://x.com/AniruddhNagare/status/1938707104770175225",
+          icon: <Icons.x className="size-3" />,
+        },
+        {
+          type: "Blog",
+          href: "https://nagareaniruddh.vercel.app/blog/ai-recruiter",
+          icon: <Icons.blog className="size-3" />,
+        },
+      ],
+      image: "/hireflow-home.png",
+      video: "",
+    },
+
+    {
+      title: "Grocery Shopping App",
+      href: "https://github.com/ANNI69/Grocery-App.git",
+      dates: "June 2025 - July 2025",
+      active: true,
+      description:"GreenCart is a full-stack shopping application built using the MERN stack — MongoDB, Express.js, React, and Node.js — featuring seamless Stripe integration for secure and efficient transactions" ,
       technologies: [
         "Next.js",
         "Typescript",
@@ -249,6 +290,45 @@ export const DATA = {
       video:
         "",
     },
+
+    { 
+      title: "PDF-RAG",
+      href: "https://github.com/ANNI69/PDF-RAG.git",
+      dates: "March 2025 - April 2025",
+      active: true,
+      description:"PDF RAG is an AI-driven web application that lets users upload PDF documents and ask questions about their content, receiving context-aware answers powered by GPT-4.1 Mini from OpenAI.This tool is built using Next.js, Express.js, and deployed securely on AWS EC2. It’s a practical showcase of Retrieval-Augmented Generation (RAG) architecture, helping users extract meaningful insights from documents in real time." ,
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Stripe",
+        "Shadcn UI",
+        "Magic UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/PDF-RAG.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Post",
+          href: "https://x.com/AniruddhNagare/status/1933967594094219269",
+          icon: <Icons.x className="size-3" />,
+        },
+        {
+          type: "Blog",
+          href: "https://nagareaniruddh.vercel.app/blog/pdf-rag",
+          icon: <Icons.blog className="size-3" />,
+        },
+      ],
+      image: "/pdf-rag.png",
+      video:
+        "",
+    },
+    
     {
       title: "UNiShare",
       href: "https://github.com/ANNI69/Unishare.git",
@@ -277,6 +357,7 @@ export const DATA = {
       video:
         "",
     },
+
     {
       title: "Panels Clone | React Native and Clerk",
       href: "https://github.com/ANNI69/MKBHD-Panels-ReactNative-Clone-With-Clerk.git",
@@ -302,6 +383,7 @@ export const DATA = {
       video:
         "",
     },
+
     {
       title: "Feed Forward",
       href: "https://github.com/ANNI69/h2.0",
@@ -322,10 +404,16 @@ export const DATA = {
           href: "https://github.com/ANNI69/h2.0",
           icon: <Icons.github className="size-3" />,
         },
+        {
+          type: "Demo",
+          href: "https://h2-0.vercel.app",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "https://media.licdn.com/dms/image/D4E12AQEIIDCbb5draA/article-cover_image-shrink_720_1280/0/1696065152678?e=2147483647&v=beta&t=vplfPARtNBS22Cj-JVaqLwndsIwkKLcJpAjwNOyphDc",
       video: "",
     },
+
     {
       title: "AnimeChan",
       href: "https://github.com/ANNI69/animechan",
