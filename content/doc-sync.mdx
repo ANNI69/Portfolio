@@ -1,0 +1,138 @@
+---
+
+title: "LiveDocs – Real-Time Collaborative Word Editor"
+author: "Aniruddh Nagare"
+publishedAt: "2025-07-07T00:00:00.000Z"
+tags: \["Next.js", "Clerk", "Liveblocks", "Realtime", "Docx", "Lexical"]
+description: "A Google Docs clone built with Next.js, Liveblocks, and Clerk — enabling real-time collaborative editing of .docx documents."
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+# 🤖 LiveDocs – Real-Time Collaborative Word Editor
+
+> ✨ Originally shared on [X by Aniruddh Nagare](https://x.com/aniruddhnagare/status/1942248332614836346?s=46)
+
+**LiveDocs** is a Google Docs clone that enables multiple users to edit `.docx` documents collaboratively in real time. Built using **Next.js**, **Liveblocks**, **Clerk**, and styled with **Tailwind CSS**, this app showcases how to create a modern, full-stack, collaborative experience.
+
+The primary goal of this project is to demonstrate a real-time environment that reflects a developer’s ability to build fast, scalable, and user-friendly collaborative tools.
+
+---
+
+## ⚙️ Tech Stack
+
+* **Frontend**: Next.js (React-based framework)
+* **Real-time Sync**: Liveblocks
+* **Editor**: Lexical (extensible rich text editor)
+* **UI Library**: ShadCN
+* **Styling**: Tailwind CSS
+* **Authentication**: Clerk
+* **Monitoring**: Sentry
+
+---
+
+## 🔋 Features
+
+### 🔐 Authentication
+
+Secure GitHub OAuth login via Clerk, with session management.
+
+### 📝 Collaborative Editing
+
+Multiple users can edit the same `.docx` document in real time. Presence, cursors, and updates are synced instantly.
+
+### 📁 Document Management
+
+* **Create**: Start new documents easily
+* **Delete**: Remove owned documents
+* **Share**: Invite others via email or link with permission control
+* **List/Search**: Filter documents by ownership or collaboration
+
+### 💬 Comments
+
+Supports inline and general comments, with threading to enable discussions inside the editor.
+
+### 👥 Real-Time Presence
+
+Visual indicators show active collaborators within the document.
+
+### 🔔 Notifications
+
+Users get notified when documents are shared, commented on, or edited by others.
+
+### 📱 Fully Responsive
+
+Built to work across all devices — desktop, tablet, and mobile.
+
+### 🧱 Developer Friendly
+
+Clean code architecture with reusable components and scalable patterns.
+
+---
+
+## 🤸 Quick Start
+
+### ✅ Prerequisites
+
+* Git
+* Node.js
+* npm
+
+### 🛠️ Installation
+
+```bash
+git clone https://github.com/ANNI69/DocSync.git
+cd collaborative-editor
+npm install
+```
+
+### 🔐 Setup Environment Variables
+
+Create a `.env` file in the root:
+
+```bash
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Liveblocks
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=
+LIVEBLOCKS_SECRET_KEY=
+```
+
+Fill in credentials from your Clerk and Liveblocks accounts.
+
+### 🚀 Run the Dev Server
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:3000` to test the app.
+
+---
+
+## 🧩 Notable Files
+
+* `globals.css` – Global styles & Tailwind imports
+* `tailwind.config.ts` – Tailwind custom config
+* `types/index.d.ts` – Shared TypeScript types
+* `lib/utils.ts` – Common utility functions
+* `components/editor/plugins/FloatingToolbar.tsx` – Toolbar logic for Lexical editor
+* `components/DeleteModal.tsx` – Delete confirmation modal
+* `components/Notifications.tsx` – Notifications UI
+
+---
+
+## 👥 Join the Community
+
+Need help or feedback? Join the [Liveblocks Discord](https://discord.gg/liveblocks) — 34k+ developers collaborating in real time.
+
+---
+
+## 🎯 Final Thoughts
+
+LiveDocs isn’t just a clone of Google Docs — it’s a full-stack, real-time playground for modern web development. If you're looking to build collaborative tools with clean UX and robust architecture, this project is a great starting point.
+
+> 🔗 [Live Demo](https://doc-sync-seven.vercel.app/)
+> 💻 [GitHub Repo](https://github.com/ANNI69/DocSync.git)
