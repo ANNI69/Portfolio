@@ -244,7 +244,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "/doc-sync.png",
+      image: "https://i.postimg.cc/cHWHwRgV/vm2.png",
       video: "",
     },
     {
@@ -252,7 +252,7 @@ export const DATA = {
       href: "https://github.com/ANNI69/VideoMeet.git",
       dates: "June 2025 - July 2025",
       active: true,
-      description:"Developed a real-time collaborative word editor using Liveblocks, Next.js, and Typescript. This project allows multiple users to edit documents simultaneously, with changes reflected in real-time across all clients. It showcases the power of Liveblocks for building collaborative applications.",
+      description:"Developed a real-time video conferencing application using Next.js, Typescript, and NeoDB. This project allows users to create and join video meetings with features like chat, screen sharing, and user authentication. It showcases the use of GetStream for real-time messaging and clerk for user management.",
       technologies: [
         "Next.js",
         "Typescript",
@@ -279,7 +279,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "/vm.png",
+      image: "https://i.postimg.cc/dVqc254R/vm.png",
       video: "",
     },
     {
