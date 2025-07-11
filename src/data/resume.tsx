@@ -36,6 +36,7 @@ export const DATA = {
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: Icons.blog, label: "Blog" },
+    { href: "/", icon: Icons.home, label: "Home" },
     { href: "https://drive.google.com/file/d/1uO3IGUohuBzUhDVrlGybamalCwEnNqtF/view?usp=drive_link", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
   ],
@@ -207,6 +208,81 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Collaborative Word Editor Using Livebloacks",
+      href: "https://github.com/ANNI69/HireFlow-AiRecruiter.git",
+      dates: "June 2025 - July 2025",
+      active: true,
+      description:"Developed a real-time collaborative word editor using Liveblocks, Next.js, and Typescript. This project allows multiple users to edit documents simultaneously, with changes reflected in real-time across all clients. It showcases the power of Liveblocks for building collaborative applications.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "Supabase",
+        "Liveblocks",
+        "TailwindCSS",
+        "clerk",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/DocSync.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://doc-sync-seven.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Post",
+          href: "https://x.com/aniruddhnagare/status/1942248332614836346?s=46",
+          icon: <Icons.x className="size-3" />,
+        },
+        {
+          type: "Blog",
+          href: "https://nagareaniruddh.vercel.app/blog/doc-sync",
+          icon: <Icons.blog className="size-3" />,
+        },
+      ],
+      image: "/doc-sync.png",
+      video: "",
+    },
+    {
+      title: "Video Conferencing App",
+      href: "https://github.com/ANNI69/VideoMeet.git",
+      dates: "June 2025 - July 2025",
+      active: true,
+      description:"Developed a real-time collaborative word editor using Liveblocks, Next.js, and Typescript. This project allows multiple users to edit documents simultaneously, with changes reflected in real-time across all clients. It showcases the power of Liveblocks for building collaborative applications.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "NeoDB",
+        "GetStream",
+        "clerk",
+        "Vercel",
+        "Zustand",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ANNI69/VideoMeet.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Demo",
+          href: "https://vm-videomeet.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Blog",
+          href: "https://nagareaniruddh.vercel.app/blog/vm",
+          icon: <Icons.blog className="size-3" />,
+        },
+      ],
+      image: "/vm.png",
+      video: "",
+    },
+    {
       title: "Ai Voice Recruiter",
       href: "https://github.com/ANNI69/HireFlow-AiRecruiter.git",
       dates: "May 2025 - June 2025",
@@ -215,11 +291,10 @@ export const DATA = {
       technologies: [
         "Next.js",
         "Typescript",
+        "Supabase",
         "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
+        "Vapi AI",
         "Magic UI",
       ],
       links: [

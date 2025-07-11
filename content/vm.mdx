@@ -1,0 +1,49 @@
+---
+title: "Building a Zoom-like Video Conferencing App with Clerk + GetStream"
+author: "Aniruddh Nagare"
+publishedAt: "2025-07-11"
+tags: ["Video Conferencing", "Clerk", "GetStream", "ZoomClone", "WebRTC", "Next.js"]
+image: "./video-conferencing-thumbnail.png"
+---
+
+import Image from 'next/image'
+
+# 📹 Zoom-Style Video Conferencing App with Scheduling & Screen Sharing
+
+> 🚀 Inspired by the shift to remote-first culture, I built a **full-featured video conferencing app** — schedule, join, screen share, and talk in real-time. Powered by **Clerk** for seamless auth and **GetStream** for scalable video/audio communication.
+
+---
+
+## ✨ Core Features
+
+- 📅 **Schedule & Join Meetings** with unique links
+- 🎥 **HD Video + Audio Streaming** via [GetStream](https://getstream.io/video/)
+- 🔒 **User Authentication & Session Management** with [Clerk.dev](https://clerk.dev)
+- 🖥️ **Screen Sharing Support**
+- 🤝 Simple, fast, and responsive meeting UX
+
+---
+
+## 📸 Screenshot Preview
+![Dashboard](/vm.png)
+![Meeting Room](https://i.ibb.co/8DKjNGFc/vm2.png)
+![Screen Sharing](https://i.ibb.co/20PRyDVT/vm1.png)
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: Next.js + Tailwind CSS
+- **Auth**: Clerk.dev
+- **Video**: GetStream Video SDK
+- **State Management**: Zustand
+- **Routing & UI**: React + Shadcn UI
+
+---
+
+## 🚧 Setup Guide (Simplified)
+
+### 1. 🔐 Clerk Authentication Setup
+
+```bash
+npm install @clerk/nextjs

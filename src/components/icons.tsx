@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import { InstagramLogoIcon, Pencil1Icon } from "@radix-ui/react-icons";
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GlobeIcon, HomeIcon, MailIcon } from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -8,6 +8,7 @@ export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   blog: (props: IconProps) => ( <Pencil1Icon/> ),
+  home: (props: IconProps) => ( <HomeIcon {...props} /> ),
   Instagram: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram"
       {...props}
