@@ -36,7 +36,7 @@ export const DATA = {
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: Icons.blog, label: "Blog" },
-    { href: "/", icon: Icons.home, label: "Home" },
+    // { href: "/", icon: Icons.home, label: "Home" },
     { href: "https://drive.google.com/file/d/1uO3IGUohuBzUhDVrlGybamalCwEnNqtF/view?usp=drive_link", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
   ],
@@ -244,7 +244,7 @@ export const DATA = {
           icon: <Icons.blog className="size-3" />,
         },
       ],
-      image: "https://i.postimg.cc/cHWHwRgV/vm2.png",
+      image: "https://i.ibb.co/cM58JLL/docsync.png",
       video: "",
     },
     {
