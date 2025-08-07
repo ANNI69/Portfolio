@@ -209,7 +209,7 @@ export const DATA = {
   projects: [
     {
       title: "Collaborative Word Editor Using Livebloacks",
-      href: "https://github.com/ANNI69/HireFlow-AiRecruiter.git",
+      href: "https://github.com/ANNI69/DocSync.git",
       dates: "June 2025 - July 2025",
       active: true,
       description:"Developed a real-time collaborative word editor using Liveblocks, Next.js, and Typescript. This project allows multiple users to edit documents simultaneously, with changes reflected in real-time across all clients. It showcases the power of Liveblocks for building collaborative applications.",
