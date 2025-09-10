@@ -48,17 +48,15 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/ANNI69",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/aniruddh-nagare-698787208/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
-      X: {
+      X:{
         name: "X",
         url: "https://x.com/AniruddhNagare",
         icon: Icons.x,
