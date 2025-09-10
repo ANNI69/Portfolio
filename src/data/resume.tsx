@@ -36,7 +36,7 @@ export const DATA = {
   navbar: [
     // { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: Icons.blog, label: "Blog" },
-    // { href: "/", icon: Icons.home, label: "Home" },
+    { href: "/", icon: Icons.home, label: "Home" },
     { href: "https://drive.google.com/file/d/1uO3IGUohuBzUhDVrlGybamalCwEnNqtF/view?usp=drive_link", icon: ResumeIcon, label: "Resume" },
     // { href: "#", icon: PencilLine, label: "Notes" },
   ],
@@ -69,12 +69,6 @@ export const DATA = {
         name: "LeetCode",
         url: "https://leetcode.com/u/Anii77/",
         icon: Icons.LeetCode,
-        navbar: true,
-      },
-      Codechef:{
-        name: "Codechef",
-        url: "https://www.codechef.com/users/aniiruddh",
-        icon: Icons.codechef,
         navbar: true,
       },
       Codeforces:{
