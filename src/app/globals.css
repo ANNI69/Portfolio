@@ -2,143 +2,424 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ——— Flat black + white + GitHub-green design tokens ——— */
 @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
-
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
-
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
-
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
-
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
-
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
-
-      --accent: 0 0% 96.1%;
+  :root {
+    /* kept for shadcn compat, light is unused — app is dark-first */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
     --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --border-strong: 0 0% 80%;
+    --input: 0 0% 90%;
+    --ring: 142 72% 45%;
+    --radius: 0.5rem;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --surface: 0 0% 100%;
+    --surface-hover: 0 0% 97%;
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
-
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-    }
+    /* raw hex tokens for components */
+    --bg: #08090a;
+    --surface-hex: #0d0f10;
+    --surface-hover-hex: #111416;
+    --border-hex: #262a2d;
+    --border-strong-hex: #353a3e;
+    --text: #f5f5f5;
+    --text-secondary: #a3a7aa;
+    --text-muted: #6f7579;
+    --gh-1: #0e4429;
+    --gh-2: #006d32;
+    --gh-3: #26a641;
+    --gh-4: #39d353;
+    --content-width: 980px;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 240 4% 3%;
+    --foreground: 0 0% 96%;
+    --card: 240 4% 5%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 4% 5%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 4% 16%;
+    --border-strong: 210 5% 23%;
+    --input: 210 4% 16%;
+    --ring: 142 72% 45%;
+
+    --surface: 240 4% 5%;
+    --surface-hover: 220 5% 8%;
   }
 
-  h3 code {
-    @apply !text-lg md:!text-xl;
-  }
-  
-  pre {
-    @apply !px-0 rounded-lg overflow-x-auto py-4
-  }
-   
-  pre [data-line] {
-    @apply px-4
+  * {
+    @apply border-border;
   }
 
-  code {
-    @apply text-sm md:text-base !leading-loose;
+  html {
+    scroll-behavior: smooth;
   }
-  
-  pre > code {
-    counter-reset: line;
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: #08090a;
+    color: #f5f5f5;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
-  
-  code[data-theme*=" "],
-  code[data-theme*=" "] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
+
+  ::selection {
+    background: #26a641;
+    color: #08090a;
   }
-   
-  @media (prefers-color-scheme: dark) {
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-      color: var(--shiki-dark);
-      background-color: var(--shiki-dark-bg);
-    }
+
+  /* Visible keyboard focus — green supplements, never sole indicator */
+  :focus-visible {
+    outline: 2px solid #39d353;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
-  
-  code[data-line-numbers] {
-    counter-reset: line;
+
+  /* Thin flat scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
   }
-  
-  code[data-line-numbers] > [data-line]::before {
-    counter-increment: line;
-    content: counter(line);
-    @apply inline-block w-4 mr-4 text-right text-gray-500;
+  ::-webkit-scrollbar-track {
+    background: #08090a;
   }
- 
-  code {
-    counter-reset: line;
+  ::-webkit-scrollbar-thumb {
+    background: #262a2d;
+    border-radius: 6px;
+    border: 2px solid #08090a;
   }
- 
-  code > [data-line]::before {
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353a3e;
+  }
+}
+
+@layer components {
+  .content-col {
+    width: min(100% - 40px, 980px);
+    margin-inline: auto;
+  }
+
+  .flat-card {
+    background: #0d0f10;
+    border: 1px solid #262a2d;
+    border-radius: 8px;
+    transition: border-color 160ms ease, background-color 160ms ease;
+  }
+  .flat-card:hover {
+    border-color: #454b50;
+    background: #111416;
+  }
+
+  .section-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6f7579;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: #26a641;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    color: #08090a;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+  .btn-primary:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    background: #d9d9d9;
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #101315;
+    color: #e8eaeb;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    transition:
+      background-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+  }
+  .btn-secondary:hover {
+    background: #1a1f23;
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+  .btn-secondary:active {
+    transform: translateY(0);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11.5px;
+    line-height: 1;
+    padding: 5px 8px;
+    border: 1px solid #262a2d;
+    border-radius: 6px;
+    background: #08090a;
+    color: #a3a7aa;
+    white-space: nowrap;
+  }
+
+  .meta-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    color: #6f7579;
+  }
+}
+
+/* Blog code blocks — flat, no glow */
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
+  background: #0d0f10 !important;
+  border: 1px solid #262a2d !important;
+}
+
+pre [data-line] {
+  @apply px-4;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+.dark code[data-theme*=" "],
+.dark code[data-theme*=" "] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
- 
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 2rem;
-  text-align: right;
-  color: gray;
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
 }
- 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
-  width: 2rem;
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .motion-grid,
+  .motion-float-slow,
+  .motion-float-slower,
+  .motion-scan-line,
+  .motion-pulse-dot,
+  .motion-cursor {
+    animation: none !important;
+  }
 }
- 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
-  width: 3rem;
+
+/* ——— Premium motion layer: CSS-driven continuous effects ——— */
+/* All flat, low-opacity, GPU-friendly. Framer Motion handles reveals. */
+
+@keyframes motion-pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.65;
+  }
+}
+.motion-pulse-dot {
+  animation: motion-pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes motion-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+}
+.motion-cursor {
+  animation: motion-cursor-blink 1.1s step-start infinite;
+  font-weight: 400;
+}
+
+/* Thin green sweep: off-screen left → across → hold off-screen. Long
+   pause between sweeps keeps it occasional, not distracting. */
+@keyframes motion-scan-x {
+  0% {
+    transform: translateX(-10vw);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.5;
+  }
+  35% {
+    transform: translateX(110vw);
+    opacity: 0.5;
+  }
+  36%,
+  100% {
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+}
+.motion-scan-line {
+  animation: motion-scan-x 7s linear infinite;
+  opacity: 0;
+}
+
+/* Faint technical grid, barely visible, very slow drift */
+.motion-grid {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(163, 167, 170, 0.055) 0,
+      rgba(163, 167, 170, 0.055) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(163, 167, 170, 0.055) 0,
+      rgba(163, 167, 170, 0.055) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  animation: motion-grid-drift 32s linear infinite;
+}
+@keyframes motion-grid-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 40px 40px, 40px 40px;
+  }
+}
+
+@keyframes motion-float-a {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+.motion-float-slow {
+  animation: motion-float-a 18s ease-in-out infinite;
+}
+
+@keyframes motion-float-b {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.motion-float-slower {
+  animation: motion-float-b 22s ease-in-out infinite;
+}
+
+/* Animated green underline for text links (width 0 → 100%) */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: #26a641;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease-out;
+}
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
 }

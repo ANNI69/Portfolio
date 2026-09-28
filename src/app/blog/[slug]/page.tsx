@@ -1,9 +1,14 @@
-import { getPost } from "@/data/blog";
+import { getBlogPosts, getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
+
+export async function generateStaticParams() {
+  const posts = await getBlogPosts();
+  return posts.map((p) => ({ slug: p.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -12,7 +17,12 @@ export async function generateMetadata({
     slug: string;
   };
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  let post;
+  try {
+    post = await getPost(params.slug);
+  } catch {
+    return undefined;
+  }
 
   let {
     title,
@@ -20,7 +30,7 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/opengraph-image`;
 
   return {
     title,
@@ -31,11 +41,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       url: `${DATA.url}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
@@ -53,50 +59,55 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  let post = await getPost(params.slug);
-
-  if (!post) {
+  let post;
+  try {
+    post = await getPost(params.slug);
+  } catch {
     notFound();
   }
 
   return (
-    <section id="blog">
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
-            url: `${DATA.url}/blog/${post.slug}`,
-            author: {
-              "@type": "Person",
-              name: DATA.name,
-            },
-          }),
-        }}
-      />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
-        <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
-          </p>
-        </Suspense>
+    <main className="bg-[#08090A] text-[#F5F5F5]">
+      <div className="mx-auto w-[min(100%-40px,720px)] py-14">
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: post.metadata.title,
+              datePublished: post.metadata.publishedAt,
+              dateModified: post.metadata.publishedAt,
+              description: post.metadata.summary,
+              image: post.metadata.image
+                ? `${DATA.url}${post.metadata.image}`
+                : `${DATA.url}/opengraph-image`,
+              url: `${DATA.url}/blog/${post.slug}`,
+              author: {
+                "@type": "Person",
+                name: DATA.name,
+              },
+            }),
+          }}
+        />
+        <Link
+          href="/blog"
+          className="font-mono text-xs text-[#A3A7AA] hover:text-[#39D353]"
+        >
+          ← All posts
+        </Link>
+        <h1 className="mt-4 text-[32px] font-bold leading-tight tracking-tight sm:text-[38px]">
+          {post.metadata.title}
+        </h1>
+        <p className="meta-mono mt-2" suppressHydrationWarning>
+          {formatDate(post.metadata.publishedAt)}
+        </p>
+        <article
+          className="prose prose-invert mt-8 max-w-none prose-pre:border prose-pre:border-[#262A2D]"
+          dangerouslySetInnerHTML={{ __html: post.source }}
+        />
       </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
-      ></article>
-    </section>
+    </main>
   );
 }

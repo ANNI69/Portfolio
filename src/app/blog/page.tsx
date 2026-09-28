@@ -1,5 +1,6 @@
-import BlurFade from "@/components/magicui/blur-fade";
+import SectionHeader from "@/components/section-header";
 import { getBlogPosts } from "@/data/blog";
+import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata = {
@@ -7,40 +8,54 @@ export const metadata = {
   description: "My thoughts on software development, life, and more.",
 };
 
-const BLUR_FADE_DELAY = 0.04;
-
 export default async function BlogPage() {
   const posts = await getBlogPosts();
+  const sorted = [...posts].sort(
+    (a, b) =>
+      new Date(b.metadata.publishedAt).getTime() -
+      new Date(a.metadata.publishedAt).getTime()
+  );
 
   return (
-    <section>
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
-      </BlurFade>
-      {posts
-        .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1;
-          }
-          return 1;
-        })
-        .map((post, id) => (
-          <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
-            <Link
-              className="flex flex-col space-y-1 mb-4"
-              href={`/blog/${post.slug}`}
-            >
-              <div className="w-full flex flex-col">
-                <p className="tracking-tight">{post.metadata.title}</p>
-                <p className="h-6 text-xs text-muted-foreground">
-                  {post.metadata.publishedAt}
-                </p>
-              </div>
-            </Link>
-          </BlurFade>
-        ))}
-    </section>
+    <main className="bg-[#08090A] text-[#F5F5F5]">
+      <div className="mx-auto w-[min(100%-40px,980px)] py-14">
+        <SectionHeader
+          index="00"
+          label="Blog"
+          title="Writing"
+          intro="Notes on software development, systems and experiments."
+        />
+        {sorted.length === 0 ? (
+          <p className="mt-8 text-[15px] text-[#A3A7AA]">
+            No posts yet.
+          </p>
+        ) : (
+          <ul className="mt-8 space-y-3">
+            {sorted.map((post) => (
+              <li key={post.slug}>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="flat-card flex items-baseline justify-between gap-4 p-4"
+                >
+                  <span>
+                    <span className="block text-[15px] font-semibold text-[#F5F5F5]">
+                      {post.metadata.title}
+                    </span>
+                    {post.metadata.summary && (
+                      <span className="mt-1 block text-[13.5px] text-[#A3A7AA]">
+                        {post.metadata.summary}
+                      </span>
+                    )}
+                  </span>
+                  <span className="meta-mono shrink-0" suppressHydrationWarning>
+                    {formatDate(post.metadata.publishedAt)}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </main>
   );
 }

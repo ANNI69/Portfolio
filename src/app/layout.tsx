@@ -1,15 +1,23 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import MotionConfigProvider from "@/components/motion/MotionConfigProvider";
+import ScrollProgress from "@/components/motion/ScrollProgress";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, JetBrains_Mono as FontMono } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -42,10 +50,6 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     card: "summary_large_image",
   },
-  verification: {
-    google: "",
-    yandex: "",
-  },
 };
 
 export default function RootLayout({
@@ -54,17 +58,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          fontMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          forcedTheme="dark"
+          disableTransitionOnChange
+        >
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:border focus:border-gh-3 focus:bg-[#0D0F10] focus:px-4 focus:py-2 focus:text-sm"
+            >
+              Skip to content
+            </a>
+            <MotionConfigProvider>
+              <ScrollProgress />
+              <Navbar />
+              <div id="main">{children}</div>
+              <Footer />
+            </MotionConfigProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>

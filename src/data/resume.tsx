@@ -1,6 +1,6 @@
 import { Icons, } from "@/components/icons";
 import { ResumeIcon } from "@radix-ui/react-icons";
-import { Code2Icon, NotebookIcon } from "lucide-react";
+import { Code2Icon, NotebookIcon, Package } from "lucide-react";
 
 // I'm currently advancing my skills as an IT Intern at Aveum Technologies
 
@@ -199,6 +199,41 @@ export const DATA = {
     // },
   ],
   projects: [
+    {
+      title: "Rubics UI — React Native Component Library",
+      href: "https://rubics.vercel.app/",
+      dates: "2026",
+      active: true,
+      description:
+        "A shadcn-style open-source component library for React Native: 15 copy-paste components you own (Button, OTP Input, Carousel, Date Picker, Combobox, Skeleton and more), TypeScript-first with single-token theming and dark mode, installed via the rubics add CLI. Published on npm with a full docs site.",
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Expo",
+        "Node.js",
+        "Next.js",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Rubics-UI/rubics-docs",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Live Demo",
+          href: "https://rubics.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "npm",
+          href: "https://www.npmjs.com/package/rubics",
+          icon: <Package className="size-3" />,
+        },
+      ],
+      image: "/rubics.png",
+      video: "",
+    },
     {
       title: "BidWise - Microservices Auction Platform",
       href: "https://bidwise-frontend.vercel.app/login",

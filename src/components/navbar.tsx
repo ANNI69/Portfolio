@@ -1,72 +1,209 @@
 "use client";
-import { Dock, DockIcon } from "@/components/magicui/dock";
-import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { FileText } from "lucide-react";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const SECTIONS = [
+  { href: "/#about", label: "About", id: "about" },
+  { href: "/#experience", label: "Experience", id: "experience" },
+  { href: "/#projects", label: "Projects", id: "projects" },
+  { href: "/#hackathons", label: "Hackathons", id: "hackathons" },
+  { href: "/#contact", label: "Contact", id: "contact" },
+];
+
+const RESUME_URL =
+  DATA.navbar.find((n) => n.label === "Resume")?.href ?? "#";
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const [active, setActive] = useState<string>("");
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    setTheme("dark");
+    if (pathname !== "/") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) setActive(e.target.id);
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    SECTIONS.forEach((s) => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
-        {DATA.navbar.map((item) => (
-          <DockIcon key={item.href}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                >
-                  <item.icon className="size-4" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{item.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        ))}
-        <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
+    <motion.header
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+      className="sticky top-0 z-50 border-b border-[#262A2D] bg-[#08090A]"
+    >
+      <nav
+        aria-label="Primary"
+        className={cn(
+          "mx-auto flex w-[min(100%-40px,980px)] items-center justify-between transition-[height] duration-200 ease-out",
+          scrolled ? "h-12" : "h-14"
+        )}
+      >
+        <Link
+          href="/"
+          className="font-mono text-sm font-bold tracking-tight text-[#F5F5F5]"
+          aria-label="Aniruddh Nagare — home"
+        >
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-[#353A3E] bg-[#0D0F10] text-[12px]">
+            AN
+          </span>
+          <span className="ml-2 hidden sm:inline">aniruddh</span>
+        </Link>
+
+        {/* Desktop links */}
+        <div className="hidden items-center gap-6 md:flex">
+          {SECTIONS.map((s) => (
+            <Link
+              key={s.id}
+              href={s.href}
+              aria-current={active === s.id ? "true" : undefined}
+              className={cn(
+                "relative text-[13.5px] text-[#A3A7AA] transition-colors duration-150 hover:text-[#F5F5F5]",
+                active === s.id && "text-[#F5F5F5]"
+              )}
+            >
+              {s.label}
+              {active === s.id && (
+                <motion.span
+                  aria-hidden
+                  layoutId="nav-active-underline"
+                  className="absolute -bottom-[17px] left-0 h-[2px] w-full bg-[#26A641]"
+                  transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                />
+              )}
+              {active === s.id && (
+                <span
+                  aria-hidden
+                  className="absolute -left-3 top-1/2 h-1 w-1 -translate-y-1/2 rounded-full bg-[#39D353]"
+                />
+              )}
+            </Link>
           ))}
-      </Dock>
-    </div>
+          <span aria-hidden className="h-4 w-px bg-[#262A2D]" />
+          <a
+            href={DATA.contact.social.GitHub.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="text-[#A3A7AA] transition-colors hover:text-[#39D353]"
+          >
+            <DATA.contact.social.GitHub.icon className="size-4" />
+          </a>
+          <a
+            href={DATA.contact.social.LinkedIn.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="text-[#A3A7AA] transition-colors hover:text-[#39D353]"
+          >
+            <DATA.contact.social.LinkedIn.icon className="size-4" />
+          </a>
+          <Link href="/blog" className="btn-secondary !px-3 !py-1.5 !text-[13px]">
+            Blog
+          </Link>
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary !px-3 !py-1.5 !text-[13px]"
+          >
+            <FileText className="size-3.5" aria-hidden />
+            Resume
+          </a>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#262A2D] text-[#F5F5F5] md:hidden"
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span aria-hidden className="font-mono text-sm">
+            {open ? "×" : "≡"}
+          </span>
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.nav
+            aria-label="Mobile"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden border-t border-[#262A2D] bg-[#08090A] md:hidden"
+          >
+            <ul className="mx-auto w-[min(100%-40px,980px)] py-3">
+              {SECTIONS.map((s) => (
+                <li key={s.id}>
+                  <Link
+                    href={s.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                  >
+                    {active === s.id && (
+                      <span
+                        aria-hidden
+                        className="h-1.5 w-1.5 rounded-full bg-[#39D353]"
+                      />
+                    )}
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/blog"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <a
+                  href={RESUME_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                >
+                  <FileText className="size-4" aria-hidden />
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }
