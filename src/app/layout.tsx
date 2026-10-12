@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans, JetBrains_Mono as FontMono } from "next/font/google";
+import { Inter as FontSans, JetBrains_Mono as FontMono, Space_Grotesk as FontDisplay } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -17,7 +17,14 @@ const fontSans = FontSans({
 
 const fontMono = FontMono({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-mono",
+});
+
+const fontDisplay = FontDisplay({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -63,7 +70,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
-          fontMono.variable
+          fontMono.variable,
+          fontDisplay.variable
         )}
       >
         <ThemeProvider
@@ -75,7 +83,7 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             <a
               href="#main"
-              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:border focus:border-gh-3 focus:bg-[#0D0F10] focus:px-4 focus:py-2 focus:text-sm"
+              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:border focus:border-gh-3 focus:bg-[#121315] focus:px-4 focus:py-2 focus:text-sm"
             >
               Skip to content
             </a>

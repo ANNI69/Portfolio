@@ -15,7 +15,7 @@ interface Props {
 export function HackathonItem({ title, description, dates, location, index = 0 }: Props) {
   return (
     <motion.li
-      className="relative pb-8 pl-8 last:pb-0"
+      className="grid grid-cols-1 gap-2 border-t border-[#2B2D30] px-5 py-6 first:border-t-0 sm:px-8 md:grid-cols-12 md:gap-6"
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={viewportOnce}
@@ -25,20 +25,18 @@ export function HackathonItem({ title, description, dates, location, index = 0 }
         delay: Math.min(index * 0.08, 0.4),
       }}
     >
-      <span
-        aria-hidden
-        className="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full border border-[#353A3E] bg-[#08090A]"
-      />
-      <p className="meta-mono">{dates}</p>
-      <h3 className="mt-0.5 text-[15.5px] font-semibold text-[#F5F5F5]">
-        {title}
-      </h3>
-      {location && (
-        <p className="meta-mono mt-0.5">{location}</p>
-      )}
-      <p className="mt-1.5 max-w-[640px] text-[14px] leading-relaxed text-[#A3A7AA]">
-        {description}
-      </p>
+      <p className="meta-mono md:col-span-4">{dates}</p>
+      <div className="md:col-span-8">
+        <h3 className="text-[16px] font-semibold tracking-tight text-[#F5F5F5]">
+          {title}
+        </h3>
+        {location && (
+          <p className="meta-mono mt-0.5">{location}</p>
+        )}
+        <p className="mt-1.5 max-w-[640px] text-[14px] leading-relaxed text-[#969696]">
+          {description}
+        </p>
+      </div>
     </motion.li>
   );
 }

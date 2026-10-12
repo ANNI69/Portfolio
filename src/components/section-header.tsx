@@ -11,7 +11,7 @@ interface SectionHeaderProps {
   className?: string;
 }
 
-/** Section header with label → title → intro stagger on viewport entry. */
+/** Editorial section header: numbered mono label, large title, intro. */
 export default function SectionHeader({
   index,
   label,
@@ -20,24 +20,24 @@ export default function SectionHeader({
   className,
 }: SectionHeaderProps) {
   return (
-    <StaggerContainer className={cn("space-y-3", className)}>
+    <StaggerContainer className={cn("space-y-4", className)}>
       <StaggerItem>
-        <p className="section-label">
+        <p className="ed-label">
           <span className="text-[#6F7579]">{index}</span>
-          <span aria-hidden className="text-[#353A3E]">
+          <span aria-hidden className="mx-2 text-[#3A3D41]">
             /
           </span>
-          {label}
+          <span className="text-[#969696]">{label}</span>
         </p>
       </StaggerItem>
       <StaggerItem>
-        <h2 className="text-[30px] font-bold leading-tight tracking-tight text-[#F5F5F5] sm:text-[34px]">
+        <h2 className="max-w-[720px] font-display text-[32px] font-bold leading-[1.1] tracking-tight text-[#F5F5F5] sm:text-[40px]">
           {title}
         </h2>
       </StaggerItem>
       {intro && (
         <StaggerItem>
-          <p className="max-w-[640px] text-[15px] leading-relaxed text-[#A3A7AA]">
+          <p className="max-w-[640px] text-[15px] leading-relaxed text-[#969696]">
             {intro}
           </p>
         </StaggerItem>

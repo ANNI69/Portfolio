@@ -15,10 +15,10 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "#08090A",
+          background: "#101113",
           color: "#F5F5F5",
           fontFamily: "sans-serif",
-          border: "4px solid #262A2D",
+          border: "4px solid #2B2D30",
         }}
       >
         <div
@@ -43,7 +43,7 @@ export default async function Image() {
         <div style={{ fontSize: 72, fontWeight: 800, marginTop: 24 }}>
           Software Developer
         </div>
-        <div style={{ fontSize: 28, color: "#A3A7AA", marginTop: 16 }}>
+        <div style={{ fontSize: 28, color: "#969696", marginTop: 16 }}>
           Scalable web · Backend systems · AI applications
         </div>
       </div>

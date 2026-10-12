@@ -22,6 +22,7 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         mono: ["var(--font-mono)", ...fontFamily.mono],
+        display: ["var(--font-display)", ...fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -69,12 +70,12 @@ const config = {
         },
       },
       maxWidth: {
-        content: "980px",
+        content: "1280px",
       },
       borderRadius: {
-        lg: "12px",
-        md: "8px",
-        sm: "6px",
+        lg: "0px",
+        md: "0px",
+        sm: "0px",
       },
       keyframes: {
         "accordion-down": {

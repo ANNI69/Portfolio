@@ -17,32 +17,34 @@ export default async function BlogPage() {
   );
 
   return (
-    <main className="bg-[#08090A] text-[#F5F5F5]">
-      <div className="mx-auto w-[min(100%-40px,980px)] py-14">
-        <SectionHeader
-          index="00"
-          label="Blog"
-          title="Writing"
-          intro="Notes on software development, systems and experiments."
-        />
+    <main className="bg-[#101113] text-[#F5F5F5]">
+      <div className="ed-frame">
+        <div className="border-t border-[#2B2D30] px-5 py-10 sm:px-8">
+          <SectionHeader
+            index="00"
+            label="Blog"
+            title="Writing"
+            intro="Notes on software development, systems and experiments."
+          />
+        </div>
         {sorted.length === 0 ? (
-          <p className="mt-8 text-[15px] text-[#A3A7AA]">
+          <p className="border-t border-[#2B2D30] px-5 py-8 text-[15px] text-[#969696] sm:px-8">
             No posts yet.
           </p>
         ) : (
-          <ul className="mt-8 space-y-3">
+          <ul className="border-t border-[#2B2D30]">
             {sorted.map((post) => (
-              <li key={post.slug}>
+              <li key={post.slug} className="border-t border-[#2B2D30] first:border-t-0">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="flat-card flex items-baseline justify-between gap-4 p-4"
+                  className="flex items-baseline justify-between gap-4 px-5 py-5 transition-colors duration-150 hover:bg-[#1A1C1F] sm:px-8"
                 >
                   <span>
-                    <span className="block text-[15px] font-semibold text-[#F5F5F5]">
+                    <span className="block text-[16px] font-semibold tracking-tight text-[#F5F5F5]">
                       {post.metadata.title}
                     </span>
                     {post.metadata.summary && (
-                      <span className="mt-1 block text-[13.5px] text-[#A3A7AA]">
+                      <span className="mt-1 block text-[13.5px] text-[#969696]">
                         {post.metadata.summary}
                       </span>
                     )}

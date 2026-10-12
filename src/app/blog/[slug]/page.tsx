@@ -67,8 +67,9 @@ export default async function Blog({
   }
 
   return (
-    <main className="bg-[#08090A] text-[#F5F5F5]">
-      <div className="mx-auto w-[min(100%-40px,720px)] py-14">
+    <main className="bg-[#101113] text-[#F5F5F5]">
+      <div className="ed-frame">
+        <div className="mx-auto w-[min(100%-40px,760px)] px-5 py-14 sm:px-8">
         <script
           type="application/ld+json"
           suppressHydrationWarning
@@ -93,7 +94,7 @@ export default async function Blog({
         />
         <Link
           href="/blog"
-          className="font-mono text-xs text-[#A3A7AA] hover:text-[#39D353]"
+          className="font-mono text-xs text-[#969696] hover:text-[#39D353]"
         >
           ← All posts
         </Link>
@@ -104,9 +105,10 @@ export default async function Blog({
           {formatDate(post.metadata.publishedAt)}
         </p>
         <article
-          className="prose prose-invert mt-8 max-w-none prose-pre:border prose-pre:border-[#262A2D]"
+          className="prose prose-invert mt-8 max-w-none prose-pre:border prose-pre:border-[#2B2D30]"
           dangerouslySetInnerHTML={{ __html: post.source }}
         />
+        </div>
       </div>
     </main>
   );

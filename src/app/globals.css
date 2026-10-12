@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ——— Flat black + white + GitHub-green design tokens ——— */
+/* ——— Dark Editorial Grid tokens (ArtCraft-inspired) ——— */
 @layer base {
   :root {
     /* kept for shadcn compat, light is unused — app is dark-first */
@@ -26,55 +26,57 @@
     --border-strong: 0 0% 80%;
     --input: 0 0% 90%;
     --ring: 142 72% 45%;
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --surface: 0 0% 100%;
     --surface-hover: 0 0% 97%;
 
     /* raw hex tokens for components */
-    --bg: #08090a;
-    --surface-hex: #0d0f10;
-    --surface-hover-hex: #111416;
-    --border-hex: #262a2d;
-    --border-strong-hex: #353a3e;
+    --bg: #101113;
+    --surface-hex: #121315;
+    --surface-hover-hex: #1a1c1f;
+    --border-hex: #2b2d30;
+    --border-strong-hex: #3a3d41;
     --text: #f5f5f5;
-    --text-secondary: #a3a7aa;
+    --text-secondary: #969696;
     --text-muted: #6f7579;
     --gh-1: #0e4429;
     --gh-2: #006d32;
     --gh-3: #26a641;
     --gh-4: #39d353;
-    --content-width: 980px;
+    --content-width: 1280px;
+    --border-width: 1px;
   }
 
   .dark {
-    --background: 240 4% 3%;
+    --background: 6 4% 6%;
     --foreground: 0 0% 96%;
-    --card: 240 4% 5%;
+    --card: 6 4% 7%;
     --card-foreground: 0 0% 96%;
-    --popover: 240 4% 5%;
+    --popover: 6 4% 7%;
     --popover-foreground: 0 0% 96%;
     --primary: 0 0% 96%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 9%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 96%;
-    --muted: 0 0% 9%;
-    --muted-foreground: 0 0% 64%;
-    --accent: 0 0% 9%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 59%;
+    --accent: 0 0% 10%;
     --accent-foreground: 0 0% 96%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 4% 16%;
-    --border-strong: 210 5% 23%;
-    --input: 210 4% 16%;
+    --border: 0 0% 17%;
+    --border-strong: 0 0% 24%;
+    --input: 0 0% 17%;
     --ring: 142 72% 45%;
 
-    --surface: 240 4% 5%;
-    --surface-hover: 220 5% 8%;
+    --surface: 6 4% 7%;
+    --surface-hover: 220 4% 11%;
   }
 
   * {
     @apply border-border;
+    border-radius: 0 !important;
   }
 
   html {
@@ -83,7 +85,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-color: #08090a;
+    background-color: #101113;
     color: #f5f5f5;
     font-size: 15px;
     line-height: 1.7;
@@ -92,14 +94,13 @@
 
   ::selection {
     background: #26a641;
-    color: #08090a;
+    color: #101113;
   }
 
   /* Visible keyboard focus — green supplements, never sole indicator */
   :focus-visible {
     outline: 2px solid #39d353;
     outline-offset: 2px;
-    border-radius: 4px;
   }
 
   /* Thin flat scrollbar */
@@ -108,39 +109,52 @@
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #08090a;
+    background: #101113;
   }
   ::-webkit-scrollbar-thumb {
-    background: #262a2d;
-    border-radius: 6px;
-    border: 2px solid #08090a;
+    background: #2b2d30;
+    border: 2px solid #101113;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #353a3e;
+    background: #3a3d41;
   }
 }
 
 @layer components {
-  .content-col {
-    width: min(100% - 40px, 980px);
+  /* Centered page frame with continuous outer rules */
+  .ed-frame {
+    width: min(100% - 32px, 1280px);
     margin-inline: auto;
+    border-left: 1px solid #2b2d30;
+    border-right: 1px solid #2b2d30;
   }
 
-  .flat-card {
-    background: #0d0f10;
-    border: 1px solid #262a2d;
-    border-radius: 8px;
-    transition: border-color 160ms ease, background-color 160ms ease;
+  /* Connected hairline dividers: 1px cells with no double borders */
+  .ed-cells {
+    display: grid;
+    gap: 1px;
+    background-color: #2b2d30;
+    border-top: 1px solid #2b2d30;
+    border-bottom: 1px solid #2b2d30;
   }
-  .flat-card:hover {
-    border-color: #454b50;
-    background: #111416;
+  .ed-cells > * {
+    background-color: #121315;
+    min-width: 0;
+  }
+
+  /* Small uppercase editorial section identifier */
+  .ed-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6f7579;
   }
 
   .section-label {
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 12px;
-    letter-spacing: 0.14em;
+    font-size: 11px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #6f7579;
     display: flex;
@@ -155,17 +169,21 @@
     background: #26a641;
   }
 
+  /* Square editorial buttons: mono uppercase, no radius */
   .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     background: #f5f5f5;
-    color: #08090a;
+    color: #101113;
     border: 1px solid transparent;
-    border-radius: 6px;
-    padding: 9px 16px;
-    font-size: 14px;
+    border-radius: 0;
+    padding: 12px 22px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
     font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     transition:
       background-color 180ms ease,
       transform 180ms ease;
@@ -183,20 +201,23 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #101315;
+    background: #16181b;
     color: #e8eaeb;
     border: 1px solid transparent;
-    border-radius: 6px;
-    padding: 9px 16px;
-    font-size: 14px;
+    border-radius: 0;
+    padding: 12px 22px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
     font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     transition:
       background-color 180ms ease,
       color 180ms ease,
       transform 180ms ease;
   }
   .btn-secondary:hover {
-    background: #1a1f23;
+    background: #1e2126;
     color: #ffffff;
     transform: translateY(-1px);
   }
@@ -204,17 +225,19 @@
     transform: translateY(0);
   }
 
+  /* Square technical tag cell */
   .tag {
     display: inline-flex;
     align-items: center;
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 11.5px;
+    font-size: 11px;
     line-height: 1;
-    padding: 5px 8px;
-    border: 1px solid #262a2d;
-    border-radius: 6px;
-    background: #08090a;
-    color: #a3a7aa;
+    letter-spacing: 0.04em;
+    padding: 6px 9px;
+    border: 1px solid #2b2d30;
+    border-radius: 0;
+    background: #101113;
+    color: #969696;
     white-space: nowrap;
   }
 
@@ -222,6 +245,18 @@
     font-family: var(--font-mono), ui-monospace, monospace;
     font-size: 12px;
     color: #6f7579;
+  }
+
+  /* Flat card kept for non-editorial surfaces (blog rows) — square */
+  .flat-card {
+    background: #121315;
+    border: 1px solid #2b2d30;
+    border-radius: 0;
+    transition: border-color 160ms ease, background-color 160ms ease;
+  }
+  .flat-card:hover {
+    border-color: #3a3d41;
+    background: #1a1c1f;
   }
 }
 
@@ -231,9 +266,9 @@ h3 code {
 }
 
 pre {
-  @apply !px-0 rounded-lg overflow-x-auto py-4;
-  background: #0d0f10 !important;
-  border: 1px solid #262a2d !important;
+  @apply !px-0 rounded-none overflow-x-auto py-4;
+  background: #121315 !important;
+  border: 1px solid #2b2d30 !important;
 }
 
 pre [data-line] {
@@ -280,6 +315,7 @@ code[data-line-numbers] > [data-line]::before {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    border-radius: 0 !important;
   }
   .motion-grid,
   .motion-float-slow,
@@ -354,15 +390,15 @@ code[data-line-numbers] > [data-line]::before {
   background-image:
     repeating-linear-gradient(
       to right,
-      rgba(163, 167, 170, 0.055) 0,
-      rgba(163, 167, 170, 0.055) 1px,
+      rgba(150, 150, 150, 0.05) 0,
+      rgba(150, 150, 150, 0.05) 1px,
       transparent 1px,
       transparent 40px
     ),
     repeating-linear-gradient(
       to bottom,
-      rgba(163, 167, 170, 0.055) 0,
-      rgba(163, 167, 170, 0.055) 1px,
+      rgba(150, 150, 150, 0.05) 0,
+      rgba(150, 150, 150, 0.05) 1px,
       transparent 1px,
       transparent 40px
     );

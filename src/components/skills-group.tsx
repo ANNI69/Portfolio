@@ -29,22 +29,30 @@ export default function SkillsGroup({ skills }: { skills?: readonly string[] }) 
   );
   const sections = extra.length > 0 ? [...GROUPS, { label: "More", items: [...extra] }] : GROUPS;
   return (
-    <StaggerContainer className="space-y-5">
+    <StaggerContainer className="border-t border-[#2B2D30]">
       {sections.map((g) => (
         <StaggerItem key={g.label}>
-          <h3 className="meta-mono mb-2 uppercase tracking-wider">
-            {g.label}
-          </h3>
-          <ul className="flex flex-wrap gap-1.5" aria-label={g.label}>
-            {g.items.map((s) => (
-              <li
-                key={s}
-                className="tag transition-all duration-150 hover:scale-[1.03] hover:border-[#39D353] hover:text-[#F5F5F5]"
-              >
-                {s}
-              </li>
-            ))}
-          </ul>
+          <div className="border-t border-[#2B2D30] first:border-t-0">
+            <p className="flex items-center gap-2.5 border-b border-[#2B2D30] bg-[#141619] px-5 py-2.5 sm:px-8">
+              <span aria-hidden className="inline-block h-[7px] w-[7px] bg-[#26A641]" />
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F5F5F5]">
+                {g.label}
+              </span>
+            </p>
+            <ul
+              aria-label={g.label}
+              className="grid grid-cols-2 border-l border-t border-[#2B2D30] bg-[#121315] sm:grid-cols-3 lg:grid-cols-5"
+            >
+              {g.items.map((s) => (
+                <li
+                  key={s}
+                  className="border-b border-r border-[#2B2D30] px-4 py-3.5 font-mono text-[12px] tracking-wide text-[#969696] transition-colors duration-150 hover:bg-[#1A1C1F] hover:text-[#F5F5F5]"
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </div>
         </StaggerItem>
       ))}
     </StaggerContainer>

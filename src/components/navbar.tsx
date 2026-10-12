@@ -54,35 +54,37 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-      className="sticky top-0 z-50 border-b border-[#262A2D] bg-[#08090A]"
+      className="sticky top-0 z-50 border-b border-[#2B2D30] bg-[#101113]"
     >
       <nav
         aria-label="Primary"
         className={cn(
-          "mx-auto flex w-[min(100%-40px,980px)] items-center justify-between transition-[height] duration-200 ease-out",
+          "mx-auto flex w-[min(100%-32px,1280px)] items-stretch justify-between transition-[height] duration-200 ease-out",
           scrolled ? "h-12" : "h-14"
         )}
       >
         <Link
           href="/"
-          className="font-mono text-sm font-bold tracking-tight text-[#F5F5F5]"
+          className="flex items-center gap-2 border-r border-[#2B2D30] pr-5 font-mono text-sm font-bold tracking-tight text-[#F5F5F5]"
           aria-label="Aniruddh Nagare — home"
         >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-[#353A3E] bg-[#0D0F10] text-[12px]">
+          <span className="inline-flex h-7 w-7 items-center justify-center border border-[#3A3D41] bg-[#121315] text-[12px]">
             AN
           </span>
-          <span className="ml-2 hidden sm:inline">aniruddh</span>
+          <span className="hidden text-[11px] uppercase tracking-[0.18em] text-[#969696] sm:inline">
+            Aniruddh
+          </span>
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-stretch md:flex">
           {SECTIONS.map((s) => (
             <Link
               key={s.id}
               href={s.href}
               aria-current={active === s.id ? "true" : undefined}
               className={cn(
-                "relative text-[13.5px] text-[#A3A7AA] transition-colors duration-150 hover:text-[#F5F5F5]",
+                "relative flex items-center border-l border-[#2B2D30] px-5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#969696] transition-colors duration-150 hover:bg-[#1A1C1F] hover:text-[#F5F5F5]",
                 active === s.id && "text-[#F5F5F5]"
               )}
             >
@@ -91,55 +93,53 @@ export default function Navbar() {
                 <motion.span
                   aria-hidden
                   layoutId="nav-active-underline"
-                  className="absolute -bottom-[17px] left-0 h-[2px] w-full bg-[#26A641]"
+                  className="absolute inset-x-0 bottom-0 h-[2px] bg-[#26A641]"
                   transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-                />
-              )}
-              {active === s.id && (
-                <span
-                  aria-hidden
-                  className="absolute -left-3 top-1/2 h-1 w-1 -translate-y-1/2 rounded-full bg-[#39D353]"
                 />
               )}
             </Link>
           ))}
-          <span aria-hidden className="h-4 w-px bg-[#262A2D]" />
-          <a
-            href={DATA.contact.social.GitHub.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profile"
-            className="text-[#A3A7AA] transition-colors hover:text-[#39D353]"
-          >
-            <DATA.contact.social.GitHub.icon className="size-4" />
-          </a>
-          <a
-            href={DATA.contact.social.LinkedIn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="text-[#A3A7AA] transition-colors hover:text-[#39D353]"
-          >
-            <DATA.contact.social.LinkedIn.icon className="size-4" />
-          </a>
-          <Link href="/blog" className="btn-secondary !px-3 !py-1.5 !text-[13px]">
-            Blog
-          </Link>
-          <a
-            href={RESUME_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary !px-3 !py-1.5 !text-[13px]"
-          >
-            <FileText className="size-3.5" aria-hidden />
-            Resume
-          </a>
+          <div className="flex items-center gap-2 border-l border-[#2B2D30] pl-4">
+            <a
+              href={DATA.contact.social.GitHub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              className="p-1.5 text-[#969696] transition-colors hover:text-[#39D353]"
+            >
+              <DATA.contact.social.GitHub.icon className="size-4" />
+            </a>
+            <a
+              href={DATA.contact.social.LinkedIn.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="p-1.5 text-[#969696] transition-colors hover:text-[#39D353]"
+            >
+              <DATA.contact.social.LinkedIn.icon className="size-4" />
+            </a>
+            <Link
+              href="/blog"
+              className="btn-secondary !px-4 !py-2 !text-[11px]"
+            >
+              Blog
+            </Link>
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary !px-4 !py-2 !text-[11px]"
+            >
+              <FileText className="size-3.5" aria-hidden />
+              Resume
+            </a>
+          </div>
         </div>
 
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#262A2D] text-[#F5F5F5] md:hidden"
+          className="inline-flex w-12 items-center justify-center border-l border-[#2B2D30] text-[#F5F5F5] md:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -159,15 +159,15 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-[#262A2D] bg-[#08090A] md:hidden"
+            className="overflow-hidden border-t border-[#2B2D30] bg-[#101113] md:hidden"
           >
-            <ul className="mx-auto w-[min(100%-40px,980px)] py-3">
+            <ul className="mx-auto w-[min(100%-32px,1280px)] py-3">
               {SECTIONS.map((s) => (
                 <li key={s.id}>
                   <Link
                     href={s.href}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                    className="flex items-center gap-2 px-2 py-2.5 text-sm text-[#969696] hover:bg-[#121315] hover:text-[#F5F5F5]"
                   >
                     {active === s.id && (
                       <span
@@ -183,7 +183,7 @@ export default function Navbar() {
                 <Link
                   href="/blog"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                  className="flex items-center gap-2 px-2 py-2.5 text-sm text-[#969696] hover:bg-[#121315] hover:text-[#F5F5F5]"
                 >
                   Blog
                 </Link>
@@ -194,7 +194,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 rounded-md px-2 py-2.5 text-sm text-[#A3A7AA] hover:bg-[#0D0F10] hover:text-[#F5F5F5]"
+                  className="flex items-center gap-2 px-2 py-2.5 text-sm text-[#969696] hover:bg-[#121315] hover:text-[#F5F5F5]"
                 >
                   <FileText className="size-4" aria-hidden />
                   Resume

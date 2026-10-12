@@ -163,7 +163,7 @@ export default function ContributionGraph() {
             href={`https://github.com/${USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-underline mt-1 inline-block font-mono text-xs text-[#A3A7AA] hover:text-[#F5F5F5]"
+            className="link-underline mt-1 inline-block font-mono text-xs text-[#969696] hover:text-[#F5F5F5]"
           >
             View profile →
           </a>
@@ -171,7 +171,7 @@ export default function ContributionGraph() {
         <p className="meta-mono shrink-0 pt-1 text-right">
           {total !== null ? `${total} contributions` : `${fallbackTotal} contributions`}
           {!live && (
-            <span className="ml-2 rounded border border-[#262A2D] px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
+            <span className="ml-2 border border-[#2B2D30] px-1.5 py-0.5 text-[10px] uppercase tracking-wide">
               offline preview
             </span>
           )}
